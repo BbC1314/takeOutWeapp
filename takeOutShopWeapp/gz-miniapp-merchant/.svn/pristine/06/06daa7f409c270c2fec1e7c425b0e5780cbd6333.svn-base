@@ -1,0 +1,11 @@
+<view class="container">
+  <gz-tab id="tab" class="van-hairline--top-bottom" bind:select="selectTab"></gz-tab>
+  <swiper current="{{activeIndex}}" style="height: {{scrollHeight}}" scroll-y="{{true}}" bindchange="bindchange">
+    <swiper-item >
+      <scroll-view style="height: {{scrollHeight}}" scroll-y="{{true}}">
+        <opreation-log wx:for="{{10}}" wx:key="{{index}}"></opreation-log>
+      </scroll-view>
+    </swiper-item>
+    <swiper-item >456</swiper-item>
+  </swiper>
+</view>

@@ -1,0 +1,21 @@
+Page({
+  data: {
+
+  },
+
+  onLoad () {
+
+  },
+
+  ondrawAccount () {
+    wx.navigateTo({
+      url: '/pages/mineChildren/drawAccount/drawAccount'
+    })
+  },
+
+  oneditAccount () {
+    wx.navigateTo({
+      url: '/pages/mineChildren/editAccount/editAccount'
+    })
+  } 
+})

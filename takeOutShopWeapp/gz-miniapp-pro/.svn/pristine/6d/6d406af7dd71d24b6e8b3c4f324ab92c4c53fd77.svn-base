@@ -1,0 +1,209 @@
+/**index.wxss**/
+.wrap{
+  padding: 0 20rpx 24rpx;
+  background-color: #ffffff;
+  margin: 20rpx
+}
+
+.new-icon{
+  display: inline-block;
+  width: 28rpx;
+  height: 28rpx;
+  line-height: 30rpx;
+  border-radius: 50%;
+  background-color: red;
+  color: #ffffff;
+  font-size: 16rpx;
+  text-align: center;
+  vertical-align: center
+}
+
+.slot-dis{
+  margin: 0 10rpx
+}
+
+.slot-title-wrap{
+  display: flex;
+  /* flex-direction: column */
+  align-items: flex-start
+}
+
+.slot-title-dis{
+  display: flex;
+  flex-direction: column;
+  font-size: 20rpx;
+  padding: 10rpx 0
+}
+
+.slot-wrap{
+  display: flex
+}
+
+.font-12{
+  line-height: 20rpx;
+  margin-right: 20rpx
+}
+
+.wrap .van-button{
+  width: 100%; 
+  height: 80rpx;
+  border-radius: 40rpx;
+  background: linear-gradient(90deg, #f7ab39, #fd4830);
+  font-size: 32rpx;
+  color: #ffffff;
+  border: none
+}
+
+.font-24-r{
+  margin: 0 10rpx
+}
+
+/* 待取货 */
+
+.wrap1{
+  padding: 0 20rpx 24rpx;
+  background-color: #ffffff;
+  margin: 20rpx
+}
+
+.dot-icon{
+  width: 16rpx;
+  height: 16rpx;
+  color: red
+}
+
+.num-tag{
+  height: 28rpx;
+}
+
+.wrap .van-tag{
+  line-height: 28rpx
+}
+
+/* .tag-wrap{
+  display: flex;
+  flex-direction: column;
+  align-items: baseline
+} */
+
+.container .order-btn-left , .container .order-btn-right{
+  height: 40px;
+  border-radius: 40rpx;
+  font-size: 32rpx;
+  border: none;
+  background-color: #eeeeee;
+  line-height: 40px
+}
+
+.footer-btn .order-btn-right{
+  width: 380rpx; 
+  color: #ffffff;
+}
+
+.footer-btn .order-btn-left{
+  width: 220rpx; 
+  margin-right: 30rpx
+}
+
+.upload-active{
+  background: linear-gradient(90deg, #02acfb, #0284c1);
+}
+
+.get-active{
+  background: linear-gradient(90deg, #c880fa, #8a47ad);
+}
+
+.send-active{
+  background: linear-gradient(90deg, #3adb53, #2cad40);
+}
+
+.footer-btn{
+  margin: 0 20rpx 
+}
+
+.footer-hint{
+  margin: 20rpx
+}
+
+.send-dis{
+  padding: 5rpx;
+  margin-right: 10rpx
+}
+
+.container .van-field__input{
+  text-align: center
+}
+
+/* 顶部筛选icon 及 弹出层 */
+
+.popup{
+  padding: 20rpx;
+}
+
+.set-filtrate{
+  position: fixed;
+  right: 20rpx;
+  top: 0;
+  z-index: 1;
+
+}
+
+.set-filtrate-icon{
+  font-size: 40rpx
+}
+
+.popup-footer {
+  display: flex;
+  justify-content: space-around;
+  padding-top: 20rpx
+}
+
+.popup-footer .order-btn-left{
+  width: 300rpx;
+  border: 1rpx solid #aaaaaa
+}
+
+.popup-footer .order-btn-right{
+  width: 300rpx
+}
+
+.popup-header-content{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 20rpx 0
+}
+
+.popup-content-item{
+  width: 331rpx;
+  height: 70rpx;
+  background-color: #eeeeee;
+  border: 1rpx solid #eeeeee;
+  border-radius: 20rpx;
+  line-height: 68rpx;
+  text-align: center;
+  margin: 10rpx 10rpx
+}
+
+.popup-header{
+  margin-top: 20rpx
+}
+
+.popup-active{
+  border-color: #02acfb;
+  background: rgba(02, 172, 251, 0.1)
+}
+
+
+/* 暂无订单的icon */
+
+.no-order{
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  margin: 100px 0;
+}
+
+.no-order-icon{
+  font-size: 100px;
+}

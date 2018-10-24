@@ -1,0 +1,135 @@
+<!--index.wxml-->
+<view class="container">
+  <gz-tab id="tab" custom-class="van-hairline--bottom" bind:select="selectTab"></gz-tab>
+  <swiper current="{{activeIndex}}" style="height: {{scrollHeight}}" scroll-y="{{true}}" bindchange="bindchange" >
+
+    <!-- 带抢单 -->
+    <swiper-item >
+      <scroll-view scroll-y="{{true}}" style="height: {{scrollHeight}}" >
+        <view wx:for="{{3}}" wx:key="item" class="wrap">
+          <van-cell-group border="{{false}}">
+            <van-cell center border="{{false}}">
+              <view slot="title" >
+                <view class="new-icon">新</view>
+                <text class="slot-dis font-28-b">剩余</text>
+                <text class="font-28-r">100分钟</text>
+              </view>
+              <view class="font-32-r"><text class="font-24-r">$</text>7.5</view>
+            </van-cell>
+            <van-cell  center border="{{false}}" value=""  >
+              <view slot="title" class="slot-wrap" >
+                <view class="slot-title-dis slot-title-wrap"><text class="font-12">12</text> <text class="font-12">km</text></view>
+                <view >
+                  <view >味千拉面(白银路店)</view>
+                  <view class="font-28-6">嘉定区白银路5888号东来广场2层</view>
+                </view>
+              </view>
+            </van-cell>
+            <van-cell  center border="{{false}}" value=""  >
+              <view slot="title" >
+                <view class="slot-title-wrap">
+                  <view class="slot-title-dis"><text class="font-12">12</text> <text class="font-12">km</text></view>
+                  <text >味千拉面(白银路店)嘉定区白银路5888号东来广场2层</text>
+                </view>
+              </view>
+            </van-cell>
+            <van-button custom-class="order-btn">抢单</van-button>
+          </van-cell-group>
+        </view>
+      </scroll-view>
+    </swiper-item>
+
+    <!-- 待取货 -->
+    <swiper-item >
+      <scroll-view scroll-y="{{true}}" style="height: {{scrollHeight}}" >
+        <view class="wrap1">
+          <van-cell center border="{{false}}">
+              <view slot="title" >
+                <view class="new-icon dot-icon"></view>
+                <text class="slot-dis font-28-b">剩余</text>
+                <text class="font-28-b">100分钟</text>
+              </view>
+            </van-cell>
+          <van-cell-group>
+            <van-cell  center border="{{false}}" value=""  >
+              <view slot="title" class="slot-wrap" >
+                <view class="slot-title-dis slot-title-wrap"><text class="font-12">12</text> <text class="font-12">km</text></view>
+                <view class="tag-wrap">
+                  <view > <van-tag custom-class="num-tag" center plain>#218</van-tag> 味千拉面(白银路店)</view>
+                  <view class="font-28-6">嘉定区白银路5888号东来广场2层</view>
+                </view>
+              </view>
+            </van-cell>
+            <van-cell  center border="{{false}}" value=""  >
+              <view slot="title" >
+                <view class="slot-title-wrap">
+                  <view class="slot-title-dis"><text class="font-12">12</text> <text class="font-12">km</text></view>
+                  <text >味千拉面(白银路店)嘉定区白银路5888号东来广场2层</text>
+                </view>
+              </view>
+            </van-cell>
+          </van-cell-group>
+          <view class="footer-hint font-24-3">预计出餐 <text class="dis">11:45</text></view>
+            <view class="footer-btn">
+              <van-button custom-class="order-btn-left get-active">联系店家</van-button>
+              <van-button custom-class="order-btn-right upload-active">上报到店</van-button>
+            </view>
+        </view>
+      </scroll-view>
+    </swiper-item>
+
+    <!-- 带送达 -->
+    <swiper-item >
+      <scroll-view scroll-y="{{true}}" style="height: {{scrollHeight}}" >
+        <view class="wrap1">
+          <van-cell center border="{{false}}">
+              <view slot="title" >
+                <view class="new-icon dot-icon"></view>
+                <text class="slot-dis font-28-b">剩余</text>
+                <text class="font-28-b">100分钟</text>
+              </view>
+            </van-cell>
+          <van-cell-group>
+            <van-cell  center border="{{false}}" value=""  >
+              <view slot="title" class="slot-wrap" >
+                <view class="slot-title-dis slot-title-wrap send-dis">已取</view>
+                <view class="tag-wrap">
+                  <view > <van-tag custom-class="num-tag" center plain>#218</van-tag> 味千拉面(白银路店)</view>
+                  <view class="font-28-6">嘉定区白银路5888号东来广场2层</view>
+                </view>
+              </view>
+            </van-cell>
+            <van-cell  center border="{{false}}" value=""  >
+              <view slot="title" >
+                <view class="slot-title-wrap">
+                  <view class="slot-title-dis"><text class="font-12">12</text> <text class="font-12">km</text></view>
+                  <text >味千拉面(白银路店)嘉定区白银路5888号东来广场2层</text>
+                </view>
+              </view>
+            </van-cell>
+          </van-cell-group>
+          <view class="footer-hint font-24-3">顾客希望到达时间 <text class="dis">11:45</text></view>
+            <view class="footer-btn">
+              <van-button custom-class="order-btn-left">联系店家</van-button>
+              <van-button custom-class="order-btn-right send-active" bind:click="ondelivery">确认送达</van-button>
+            </view>
+        </view>
+      </scroll-view>
+    </swiper-item>
+  </swiper>
+
+  <!-- 弹出框 -->
+  <van-dialog
+    custom-class="dialog"
+    title="请输入小票订单后四位"
+    use-slot
+    show="{{ show }}"
+    bind:close="onClose"
+  >
+  <van-field
+    value="{{ username }}"
+    label="用户名"
+    placeholder="请输入用户名"
+  />
+  </van-dialog>
+</view>

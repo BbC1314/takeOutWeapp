@@ -1,0 +1,98 @@
+.shop-item {
+  display: flex;
+  margin: 20rpx 0;
+  background-color: #ffffff;
+  padding: 0 20rpx;
+  box-shadow: 0 2px 12px 0 rgba(0, 0, 0, 0.1);
+}
+
+.shop-title {
+  font-weight: 500;
+  font-size: 32rpx;
+}
+
+.shop-item__left {
+  margin-right: 20rpx;
+  padding: 16px 0;
+}
+
+.shop-item__left .shop-image {
+  width: 128rpx;
+  height: 128rpx;
+  display: block;
+  border-radius: 5px;
+}
+
+.shop-item__right {
+  flex: 1;
+  padding: 16px 0;
+  overflow: hidden;
+}
+
+.shop-item__right .shop-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.shop-content {
+  margin-top: 8px;
+}
+
+.shop-content.flex-start {
+  justify-content: flex-start;
+}
+
+.shop-content .content,
+.shop-content .content__border,
+.shop-content .iconfont {
+  font-size: 24rpx;
+}
+
+.content + .content {
+  margin-left: 10rpx;
+}
+
+.shop-content .content__border {
+  margin-left: 10rpx;
+  padding-left: 10rpx;
+}
+
+.shop-content .content.fraction-value {
+  color: #fa541c;
+}
+
+.content-preferential {
+  color: #666666;
+}
+
+
+
+
+/* 已关店标志 */
+.shop-sign{
+  display: flex;
+  align-items: flex-end;
+}
+
+.shop-sign-left{
+  width: 70%;
+}
+
+.shop-sign-right{
+  width: 180rpx;
+  height: 48rpx;
+  line-height: 48rpx;
+  border: 1rpx solid #fe8503;
+  border-radius: 30rpx;
+  color: #fe8503;
+  background: url('http://oss.gaius.cn/314879b41d526eeb6db65f87bf0ba650.o6zAJsxAanAQ-gXWgOJvZ5caqbxU') 
+  no-repeat 
+  scroll 
+  15rpx center / 25% 
+  content-box content-box;
+}
+
+.shop-sign-right-text{
+  margin-left: 60rpx
+}

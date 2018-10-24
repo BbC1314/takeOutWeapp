@@ -1,0 +1,29 @@
+.container{
+  margin: 20rpx
+}
+
+.header{
+  margin-top: 20rpx
+}
+
+.icon-dis{
+  margin-right: 6px
+}
+
+.slot-content{
+  text-align: left;
+  font-size: 24rpx;
+  color: blue
+}
+
+.btn{
+  position: absolute;
+  width: 710rpx;
+  bottom: 50px
+}
+
+.container .van-button--large{
+  height: 40px;
+  line-height: 38px;
+  border-radius: 40px
+}

@@ -1,0 +1,7 @@
+{
+  "navigationBarTitleText": "保证金",
+  "usingComponents": {
+    "van-button": "vant-weapp/button/index",
+    "van-cell": "vant-weapp/cell/index"
+  }
+}

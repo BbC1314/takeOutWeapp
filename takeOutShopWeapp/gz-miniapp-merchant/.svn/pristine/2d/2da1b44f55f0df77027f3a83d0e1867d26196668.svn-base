@@ -1,0 +1,40 @@
+<!--pages/dailyOrder/dailyOrder.wxml-->
+<view class="container">
+  <view class="title-date">
+    <text class="date {{dateId == 1 ? 'color' : ''}}" data-id="1" bindtap="onselectDate">今日</text>
+    <text class="date {{dateId == 2 ? 'color' : ''}}" data-id="2" bindtap="onselectDate">全部</text>
+    <text class="iconfont icon-rili date {{dateId == 3 ? 'color' : ''}}" data-id="3" bindtap="onselectDate"></text>
+  </view>
+  <gz-tab id="tab" custom-class="van-hairline--bottom" bind:select="selectTab"></gz-tab>
+  <swiper current-item-id="{{activeIndex}}" style="height: {{scrollHeight}}" bindchange="activeChange">
+    <!-- 完成单 -->
+    <swiper-item item-id="{{1}}">
+      <scroll-view class="page-wrapper" scroll-y style="height: {{scrollHeight}}">
+        <achieve-order-item wx:for="{{achieveOrder}}" wx:key="index" item="{{item}}" bind:click="orderDetail"></achieve-order-item>
+      </scroll-view>
+    </swiper-item>
+    <!-- 取消单 -->
+    <swiper-item item-id="{{2}}">
+      <scroll-view class="page-wrapper" scroll-y style="height: {{scrollHeight}}">
+        <achieve-order-item wx:for="{{cancelOrder}}" wx:key="index" item="{{item}}" bind:click="orderDetail"></achieve-order-item>
+      </scroll-view>
+    </swiper-item>
+  </swiper>
+
+  <!-- 弹出层 -->
+  <van-popup
+  show="{{ show }}"
+  position="top"
+  bind:close="onClose"
+  >
+  <view class="pop">
+    <van-cell title="请选择日期" >
+      <picker mode="date" value="{{selectDate}}" start="2018-09-01" end="{{newDate}}" bindchange="bindDateChange">
+        <view class="picker">
+          当前选择: {{selectDate}}
+        </view>
+      </picker>
+    </van-cell>
+  </view>
+</van-popup>
+</view>

@@ -1,0 +1,32 @@
+<view class="wrap" data-orderid="{{item.orderId}}" bindtap="acticityDetail">
+  <van-cell center border="{{false}}">
+      <view slot="title" class="slot-title" >
+        <text class="slot-dis font-28-b">{{item.closeTime}}</text>
+        <text class="font-28-b">准时送达</text>
+      </view>
+      <view class="slot-content">
+        <view class="rate">¥233</view>
+        <i-rate value="2" count="3" disabled></i-rate>
+      </view>
+    </van-cell>
+    <view class="item-content">
+      <van-cell center border="{{false}}" value=""  >
+        <view slot="title" class="slot-wrap" >
+          <view class="new-icon dot-icon send-dis dot-dis"></view>
+          <view class="tag-wrap font-32-c van-ellipsis" style="max-width: 600rpx">
+            <van-tag custom-class="num-tag" center plain>#218</van-tag>
+            {{item.province}}{{item.city}}{{item.area}}{{item.address}}
+          </view>
+        </view>
+      </van-cell>
+      <van-cell  center border="{{false}}" value=""  >
+        <view slot="title" >
+          <view class="slot-title-wrap">
+              <view class="new-icon dot-icon dot-dis"></view>
+            <text >已隐藏用户信息</text>
+          </view>
+        </view>
+      </van-cell>
+    </view>
+    <slot ></slot>
+</view>

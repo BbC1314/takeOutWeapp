@@ -1,0 +1,59 @@
+<view class="container">
+  <view class="header">
+    <view class="header-left van-hairline--right">
+      <view class="header-left__num">4.7</view>
+      <text class="">综合评价</text>
+    </view>
+    <view class="header-right">
+      <view class="header-right__num">88</view>
+      <text class="">好评数</text>
+    </view>
+    <view class="header-right">
+      <view class="header-right__num">0</view>
+      <text class="">差评数</text>
+    </view>
+    <view class="header-footer">
+      <text >数据截止至昨日23:59,可能出现延迟,请耐心等待</text>
+    </view>
+  </view>
+  <view class="middle van-hairline--bottom">
+    <text class="">关键词</text>
+    <view class="middle-content">
+      <view class="middle-content__left">
+        <text class="dis middle-title">好评</text>
+      </view>
+      <view custom-class="dis" class="evaluate">
+        <van-tag mark>配送很快12</van-tag>
+        <van-tag mark>根本就没见到东西就被12</van-tag>
+        <van-tag mark>配送很快12</van-tag>
+        <van-tag mark>配送很快12</van-tag>
+      </view>
+    </view>
+    <view class="middle-content">
+      <view class="middle-content__left">
+        <text class="dis middle-title">差评</text>
+      </view>
+      <view custom-class="dis" class="evaluate">
+        <van-tag mark>配送很快12</van-tag>
+        <van-tag mark>根本就没见到东西就被12</van-tag>
+        <van-tag mark>配送很快12</van-tag>
+        <van-tag mark>配送很快12</van-tag>
+      </view>
+    </view>
+  </view>
+  <view class="footer">
+    <van-cell title="优质评价" value="用户(0)" />
+    <view class="footer-item van-hairline--top-bottom" wx:for="{{evaluateList}}" wx:key="index">
+      <!-- <view class="item-top font-32-c">
+        <view class="item-top-left van-ellipsis">平台服务费的力困筋乏了看家的说法卢克倒计时了看法就的</view>
+        <view class="item-top-right">-3.00</view>
+      </view>
+      <view class="item-top font-24-9">
+        <view class="item-bottom-left van-ellipsis">2018-10-28 06:54</view>
+        <view class="item-bottom-right">预计在10-29号到账</view>
+      </view> -->
+      <text class="">{{item.comment}}</text>
+    </view>
+    <i-load-more hidden="{{ noMoreData || loading }}" loading="{{ loading }}" />
+  </view>
+</view>

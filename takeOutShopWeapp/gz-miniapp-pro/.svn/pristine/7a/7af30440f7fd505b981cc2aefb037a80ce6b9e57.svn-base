@@ -1,0 +1,33 @@
+/* pages/dailyOrder/dailyOrder.wxss */
+.page-wrapper{
+  padding: 0
+}
+
+.tilte-nav{
+  padding: 20rpx
+}
+
+.dis{
+  margin-right: 60rpx
+}
+
+.pop{
+  display: flex;
+  flex-wrap: wrap;
+  margin: 10rpx
+}
+
+.pop-item{
+  margin: 10rpx;
+  width: 218rpx;
+  text-align: center;
+  height: 25px;
+  line-height: 27px;
+  border: 1rpx solid #666666;
+  border-radius: 5px
+}
+
+.color{
+  color: #ffffff;
+  background-color: blue
+}

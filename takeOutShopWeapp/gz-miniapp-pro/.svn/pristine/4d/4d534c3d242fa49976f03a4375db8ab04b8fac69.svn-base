@@ -1,0 +1,26 @@
+Page({
+  data: {
+    addressType:'success',
+    windowHeight:0
+  },
+
+  onLoad(query){
+    // var stateTitleId=getApp().orderDetail1
+    // console.log(stateTitleId);
+    // this.setData({
+    //   type:query.type
+    // })
+
+    wx.getSystemInfo({
+      success: r=> {
+        this.setData({
+          windowHeight: r.windowHeight- 60 +'px'
+        })
+      },
+      fail: () =>{
+        console.log(未获取到设备信息);
+      }
+    })
+  },
+
+})

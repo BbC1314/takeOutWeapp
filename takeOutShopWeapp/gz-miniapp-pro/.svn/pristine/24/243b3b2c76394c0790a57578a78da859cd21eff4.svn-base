@@ -1,0 +1,13 @@
+{
+  "navigationBarTitleText": "今日订单",
+  "usingComponents": {
+    "gz-tab": "../../components/tab/index",
+    "van-cell": "vant-weapp/cell/index",
+    "van-cell-group": "vant-weapp/cell-group/index",
+    "van-tag": "vant-weapp/tag/index",
+    "i-rate": "../../components/rate/index",
+    "achieve-order-item": "../../components/achieve-order-item/index",
+    "van-popup": "vant-weapp/popup/index",
+    "no-order": "../../components/no-order/index"
+  }
+}

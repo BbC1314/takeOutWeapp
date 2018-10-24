@@ -1,0 +1,80 @@
+<!--pages/mine/mine.wxml-->
+<view class="container">
+  <view class="mine-header">
+    <image class="mine-header-image" wx:if="{{status === 0}}" mode="aspectFill" lazy-load src="../../assets/images/mine/bg_me.png" />
+    <image class="mine-header-image" wx:else mode="aspectFill" lazy-load src="../../assets/images/mine/bg_me02.png" />
+    <view class="mine-header-content">
+      <view class="content__left">
+        <image class="avatar" mode="aspectFill" lazy-load />
+      </view>
+      <view class="content__right">
+        <view class="user-action">
+          <view class="user-title" bindtap="onmyData">
+            <text class="title">{{userInfo.nickName}}</text>
+            <text class="iconfont icon-go"></text>
+          </view>
+          <view class="user-status" bind:tap="changeStatus">
+            <text class="">{{ statusMap[status] }}</text>
+            <text class="iconfont icon-down"></text>
+          </view>
+        </view>
+        <view class="user-credit">
+          <text bindtap="oncredit">信用分：{{userInfo.id}}</text>
+        </view>
+        <view class="user-grade">
+          <text class="gz-grade-tag van-hairline--surround">{{userInfo.sex}}普通骑手</text>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class="mine-tool">
+    <view class="mine-tool-item" bind:tap="dailyOrder">
+      <view class="value">
+        <text class="">{{userInfo.latitude}}</text>
+        <van-icon custom-class="value-icon" name="arrow" size="24rpx"></van-icon>
+      </view>
+      <view class="title">今日完成单</view>
+    </view>
+    <view class="mine-tool-item" bind:tap="myWallet">
+      <view class="value">
+        <text class="">{{userInfo.longitude}}</text>
+        <van-icon custom-class="value-icon" name="arrow" size="24rpx"></van-icon>
+      </view>
+      <view class="title">今日预计收入</view>
+    </view>
+    <view class="mine-tool-item" bind:tap="myEvaluate">
+      <view class="value">
+        <text class="">4.6</text>
+        <van-icon custom-class="value-icon" name="arrow" size="24rpx"></van-icon>
+      </view>
+      <view class="title">我的评价</view>
+    </view>
+  </view>
+  <!-- <van-cell-group custom-class="gz-cell-group">
+    <van-cell title="我的罚单" center is-link bindtap="myTicket">
+      <image slot="icon" class="icon-image" src="../../assets/images/mine/bill.png" />
+    </van-cell>
+    <van-cell title="我的保险" center is-link>
+      <image slot="icon" class="icon-image" src="../../assets/images/mine/insurance.png" />
+    </van-cell>
+    <van-cell title="在线客服" center is-link>
+      <image slot="icon" class="icon-image" src="../../assets/images/mine/cs.png" />
+    </van-cell>
+  </van-cell-group> -->
+  <van-cell-group custom-class="gz-cell-group">
+    <van-cell title="奖罚规则" center is-link bindtap="ticketRule"></van-cell>
+    <van-cell title="系统帮助" center is-link></van-cell>
+    <!-- <van-cell title="关于我们" center is-link></van-cell> -->
+    <van-cell bind:click="onchangeSetting" title="系统设置" center is-link></van-cell>
+  </van-cell-group>
+
+  <!-- 弹出层 -->
+  <van-action-sheet
+    show="{{ show }}"
+    actions="{{ actions }}"
+    cancel-text="取消"
+    bind:close="onClose"
+    bind:cancel="onClose"
+    bind:select="onSelect">
+  </van-action-sheet>
+</view>

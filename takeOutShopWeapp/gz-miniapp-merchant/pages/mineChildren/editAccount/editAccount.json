@@ -1,0 +1,8 @@
+{
+  "navigationBarTitleText": "新建账户",
+  "usingComponents": {
+    "van-icon": "vant-weapp/icon/index",
+    "van-field": "vant-weapp/field/index",
+    "van-button": "vant-weapp/button/index"
+  }
+}

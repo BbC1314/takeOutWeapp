@@ -1,0 +1,138 @@
+<view class="warp">
+  <view class="title hairline-bottom">
+    <van-cell>
+      <view slot="title">
+        <text class="font-40 dis-right-30">#107</text>
+        <text class="font-fd-32">尽快送达</text>
+      </view>
+      <view class="">待骑手取单</view>
+    </van-cell>
+  </view>
+
+  <van-cell-group>
+    <van-cell border="{{ false }}">
+      <view slot="title">
+        <text class="font-36">慕容复</text>
+      </view>
+      <text class="iconfont icon-map dis-right-30 tag-color"></text>
+      <text class="iconfont icon-sm-my-tele tag-color" data-phone="13137265010" bindtap="callPhone"></text>
+    </van-cell>
+    <van-cell border="{{ false }}">
+      <view class="status font-66">上海市普陀区长寿路748弄湖南大厦</view>
+      <view class="status font-66">上海市普陀区长寿路748弄鑫远大厦</view>
+    </van-cell>
+  </van-cell-group>
+
+  <van-cell-group>
+    <van-cell border="{{ false }}">
+      <view slot="title">
+        <text class="font-36 dis-right-20">19:35</text>
+        <text class="font-36 dis-right-30">待骑手送餐</text>
+        <text class="dis-right-20">骑手:</text>
+        <text >王磊</text>
+      </view>
+      <text class="iconfont icon-sm-my-tele tag-color" data-phone="13137265010" bindtap="callPhone"></text>
+    </van-cell>
+    <van-cell border="{{ false }}">
+      <view slot="title">
+        <text class="font-fd-32" data-index="0" bindtap="onshow">{{shows[0] ? '收起进度' : '进度追踪'}}</text>
+        <text wx:if="{{shows[0]}}" class="iconfont icon-arr-top font-fd-32"></text>
+        <text wx:else class="iconfont icon-sanx-up font-fd-32"></text>
+      </view>
+    </van-cell>
+    <van-cell wx:if="{{shows[0]}}" border="{{ false }}">
+      <view wx:for="{{5}}" wx:key="index" class="status font-66">
+        <text class="dis-right-30">19:32</text>
+        <text class="">骑手已取货</text>
+      </view> 
+    </van-cell>
+  </van-cell-group>
+
+  <van-cell-group>
+    <van-cell>
+      <view slot="title" class="font-36">3件商品</view>
+      <text class="font-fd-32" data-index="1" bindtap="onshow">{{shows[1] ? '收起明细' : '查看明细'}}</text>
+      <text wx:if="{{shows[1]}}" class="iconfont icon-arr-top font-fd-32"></text>
+      <text wx:else class="iconfont icon-sanx-up font-fd-32"></text>
+    </van-cell>
+
+    <view wx:if="{{shows[1]}}">
+      <van-cell>
+        <view wx:for="{{4}}" wx:key="index" class="order-detail special">
+          <text class="long-order">玉米鲜肉大混沌(10个6两)-浓汤混沌醋不要香菜多加蒜,不要辣椒多放牛肉</text>
+          <text class="">×1</text>
+          <text class="">17.90</text>
+        </view>
+      </van-cell>
+      <van-cell>
+        <view class="order-detail">
+          <text >餐盒费</text>
+          <text >3.00</text>
+        </view>
+        <view class="order-detail">
+          <text >配送费</text>
+          <text >5.00</text>
+        </view>
+      </van-cell>
+      <van-cell>
+        <view class="order-detail">
+          <text >在线支付立减优惠</text>
+          <text >-5.00</text>
+        </view>
+        <view class="order-detail">
+          <text >受此订单专享红包</text>
+          <text >-5.00</text>
+        </view>
+      </van-cell>
+    </view>
+
+    <van-cell>
+      <view slot="title" class="font-36">订单总收入</view>
+      <view class="font-fd-32">
+        <text >¥</text>
+        <text >136.50</text>
+      </view>
+    </van-cell>
+  </van-cell-group>
+    
+  <view class="footer hairline-top">
+    <van-cell-group>
+      <van-cell border="{{ false }}">
+        <view slot="title" class="">
+          <text class="dis-right-20 font-36">19:35</text>
+          <text class="font-36">用户取消申请 \n </text>
+          <text class="font-66">取消申请被同意</text>
+        </view>
+      </van-cell>
+      <van-cell border="{{ false }}">
+        <view slot="title" class="font-fd-32">
+          <text class="" data-index="2" bindtap="onshow">{{shows[2] ? '收起进度' : '查看进度'}}</text>
+          <text wx:if="{{shows[2]}}" class="iconfont icon-arr-top"></text>
+          <text wx:else class="iconfont icon-sanx-up"></text>
+        </view>
+      </van-cell>
+      <van-cell wx:if="{{shows[2]}}" border="{{ false }}">
+        <view slot="title">
+          <text class="">19:35</text>
+        </view>
+        <view class="cancel-order font-66">
+          <text >用户申请取消订单\n我乔峰纵然可以救阿紫千次万次也不会把阿朱还给你用户申请取消订单用户申请取消订单</text>
+        </view>
+      </van-cell>
+    </van-cell-group>
+    <van-cell>
+      <view class="order-info">
+        <view class="order-info-left">
+          <text >订单号:</text>
+          <text >下单时间:</text>
+          <text >完成单:</text>
+        </view>
+        <view class="order-info-right">
+          <text >201810121921078</text>
+          <text >10-12 19:21</text>
+          <text >10-12 19:21</text>
+        </view>
+      </view>
+    </van-cell>
+  </view>
+</view>

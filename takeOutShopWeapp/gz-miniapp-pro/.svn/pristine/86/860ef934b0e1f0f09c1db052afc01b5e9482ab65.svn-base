@@ -1,0 +1,24 @@
+//index.js
+import Tab from '../../components/tab/index'
+
+Page({
+  data: {
+    tabData: {
+      selectedId: 0,
+      list: [
+        { id: 0, title: '待抢单(0)' },
+        { id: 1, title: '待取货(0)' },
+        { id: 2, title: '待送达(0)' }
+      ]
+    },
+  },
+  onLoad () {
+    this.loadTabs()
+  },
+  loadTabs () {
+    Tab._init('#tab', this.data.tabData)
+  },
+  selectTab (e) {
+    console.log(e)
+  }
+})

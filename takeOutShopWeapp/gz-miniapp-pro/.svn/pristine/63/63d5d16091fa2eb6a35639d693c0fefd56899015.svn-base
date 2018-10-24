@@ -1,0 +1,4 @@
+<view wx:if="{{item === 0}}" class="no-order">
+  <text class="iconfont icon-zanwudingdan" style="font-size: {{size}}px"></text>
+  <text >暂无订单</text>
+</view>

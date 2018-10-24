@@ -1,0 +1,13 @@
+{
+  "name": "fyd-mini-pro",
+  "version": "0.1.0",
+  "lockfileVersion": 1,
+  "requires": true,
+  "dependencies": {
+    "vant-weapp": {
+      "version": "0.3.2",
+      "resolved": "http://registry.npm.taobao.org/vant-weapp/download/vant-weapp-0.3.2.tgz",
+      "integrity": "sha1-RgCFsvmgpAa2aUfEp/HuyMm0+Ko="
+    }
+  }
+}

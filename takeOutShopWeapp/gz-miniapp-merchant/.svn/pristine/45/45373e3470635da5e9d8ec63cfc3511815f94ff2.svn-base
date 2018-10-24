@@ -1,0 +1,110 @@
+/**
+ * 自定义数据
+ */
+
+const my = {
+  title: '我自己的标题'
+}
+Page({
+
+  /**
+   * 页面的初始数据
+   */
+  data: {
+    title: '这是测试页面标题',
+    books: [
+      {
+        name: 'angular',
+        version: '0.0.1'
+      }
+    ]
+  },
+
+  /**
+   * 生命周期函数--监听页面加载
+   */
+  onLoad: function (options) {
+    // console.log(App)
+    // console.log(getApp())
+    // console.log('onLoad')
+    // wx.setNavigationBarColor({
+    //   frontColor: '#ffffff',
+    //   backgroundColor: '#00ff00',
+    // })
+    console.log('test页面加载')
+    console.log(options)
+  },
+  // 测试函数
+  changeTitle () {
+    // console.log('嫦娥')
+    // console.log(this)
+    // this.setData(my)
+    // console.log(getCurrentPages())
+    // wx.redirectTo({
+    //   url: 'pages/aa/aa',
+    // })
+    // const app = getApp()
+    // console.log(app)
+    // app.ha()
+    console.log(getCurrentPages())
+  },
+  handleBack () {
+    wx.navigateBack()
+  },
+  onShow (val) {
+    // console.log(val) // val === undefined
+    // wx.showToast({
+    //   title: '欢迎进入测试页面'
+    // })
+    console.log('test页面显示')
+  },
+  onHide () {
+    console.log('test页面隐藏')
+  },
+  onReady () {
+    // console.log('onReady')
+    // 这里表示,页面初次渲染完成时触发,一个页面只会调用一次,代表页面已经准备妥当
+    // 可以和视图层进行交互,对界面内容进行设置的API应在此之后调用
+    // setTimeout(function(){
+    //   wx.setNavigationBarColor({
+    //     frontColor: '#ffffff',
+    //     backgroundColor: '#0000ff',
+    //   })
+    // }, 3000)
+  },
+  onUnload () {
+    console.log('页面卸载')
+  },
+  // 注意: Object内容在页面加载时会进行一次深拷贝,需考虑数据大小对页面加载的开销
+  // onPullDownRefresh () {
+  //   console.log('下拉刷新')
+  //   wx.stopPullDownRefresh()
+  // },
+  // onReachBottom () {
+  //   console.log('到底了')
+  // },
+  // onPageScroll (obj) {
+  //   console.log(obj)
+  // }
+  // 点击转发时触发
+  onShareAppMessage (res) {
+    // console.log(res)
+    return {
+      title: 'hello world',
+      path: 'pages/index/index'
+    }
+  },
+  // 导航点击时
+  onTabItemTap (obj) {
+    // console.log(obj)
+    // console.log(this.route)
+    this.setData({
+      // title: 'the new title'
+      'books[0].name': 'react'
+    }, function () {
+      wx.showToast({
+        title: '数据更新完成',
+      })
+    })
+  }
+})

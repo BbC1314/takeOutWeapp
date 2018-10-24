@@ -1,0 +1,104 @@
+import {request, getRid} from '../../utils/util'
+
+Page({
+  data: {
+    rid: '',
+    addressType:'success',
+    windowHeight:0,
+    orderId: '',
+    orderDetail: {},
+    btnContent: '',
+    orderStatus: 0,
+    show: false
+  },
+
+  onLoad(query){
+    // var stateTitleId=getApp().orderDetail1
+    // console.log(stateTitleId);
+    // this.setData({
+    //   type:query.type
+    // })
+    this.setData({
+      orderId: query.orderId,
+      rid: getRid()
+    })
+    console.log(this.data.orderId);
+
+    wx.getSystemInfo({
+      success: r=> {
+        this.setData({
+          windowHeight: r.windowHeight- 60 +'px'
+        })
+      },
+      fail: () =>{
+        console.log(未获取到设备信息);
+      }
+    })
+    this.getDispathOrderDetail()
+  },
+
+  getDispathOrderDetail () {
+    request('getDispathOrderDetail', {
+      orderId: this.data.orderId,
+      orderType: 'XSDC',
+      service: 'gz.fyd.dispath',
+      rid: this.data.rid
+    }).then( r => {
+      console.log(r.data);
+      let status = r.data.order.logisticsStatus
+      let btnContent = ''
+      if (status == 0) {
+        btnContent= '抢单'
+      }else if (status == 1) {
+        btnContent= '上报到店'
+      }else{
+        btnContent= '确认送达'
+      }
+      this.setData({
+        btnContent,
+        orderStatus: status,
+        orderDetail: r.data
+      })
+    })
+  },
+
+  setOrderDispathStatus (orderId, num) {
+    request('setOrderDispathStatus', {
+      orderId,
+      service: 'gz.fyd.dispath',
+      status: num,
+      orderType: 'XSDC',
+      rid: this.data.rid
+    }).then( () => {
+      wx.showToast({
+        title: '已抢单成功',
+        icon: 'success'
+      })
+      setTimeout( () => {
+        wx.navigateBack({
+          delta: 1
+        })
+      },1500)
+    })
+  },
+
+  onconfirm (e) {
+    console.log(e.currentTarget.dataset.orderid);
+    console.log(this.data.orderStatus+1);
+    let orderId = e.currentTarget.dataset.orderid
+    let orderStatus = this.data.orderStatus
+    if (orderStatus < 2) {
+      this.setOrderDispathStatus(orderId, this.data.orderStatus+1)
+    }else{
+      this.setData({
+        show: true
+      })
+    }
+  },
+
+  onClose() {
+    this.setData({
+       shows: false 
+      });
+  },
+})

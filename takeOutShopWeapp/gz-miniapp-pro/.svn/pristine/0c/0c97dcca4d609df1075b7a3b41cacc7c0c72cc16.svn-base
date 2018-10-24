@@ -1,0 +1,144 @@
+//index.js
+import Tab from '../../components/tab/index'
+
+Page({
+  data: {
+    activeIndex:0,
+    tabData: {
+      scrollHeight:0,
+      selectedId: 1,
+      list: [
+        { id: 1, title: '待抢单(0) ' },
+        { id: 2, title: '待取货(0)' },
+        { id: 3, title: '待送达(0)' }
+      ]
+    },
+    show: false,
+    shows:false,
+    popupData:[
+      {
+        title: '运单选择' , content:[{content:'外卖单' , id: 0 ,},{content:'帮买单' , id: 0},{content:'帮送单' , id: 0},{content:'淘宝单' , id: 0}] 
+      },
+      {
+        title: '运单排序' , content:[{content:'取货距离近到远' , id: 0},{content:'配送距离近到远' , id: 0},{content:'运单金额高到低' , id: 0},{content:'运单星级高到低' , id: 0}] 
+      },
+      {
+        title: '其他' , content:[{content:'新单置顶显示' , id: 0}] 
+      }
+    ],
+    popupIndex:0
+  },
+
+  onLoad: function() {
+    this.loadTabs()
+    wx.getSystemInfo({
+      success: res => {
+        const query = wx.createSelectorQuery()
+        query.select('#tab').boundingClientRect()
+        query.exec(r => {
+          this.setData({
+            scrollHeight: res.windowHeight-r[0].height+'px'
+          })
+          console.log(r[0].height)
+        })
+      }
+    })
+  },
+
+  ondelivery(){
+    this.setData({
+      show:true
+    })
+  },
+
+  loadTabs () {
+    Tab._init('#tab', this.data.tabData)
+  },
+  selectTab (e) {
+    console.log(e.detail);
+    this.setData({
+      activeIndex: e.detail.id-1
+    })
+  },
+
+  bindchange(e) {
+    this.setData({
+      'tabData.selectedId': e.detail.current + 1
+    })
+    Tab._init('#tab', this.data.tabData)
+  },
+
+  oncontend(e){
+    console.log(e);
+  },
+
+  onorderDetail(){
+    wx.navigateTo({
+      url:'/pages/orderDetail/orderDetail'
+    })
+  },
+
+  onpopupFiltrate(){
+    this.setData({
+      shows: true
+    })
+  },
+
+  onClose() {
+    this.setData({
+       shows: false 
+      });
+  },
+
+  onpopupConfirm(){
+    this.setData({
+      shows: false
+    })
+  },
+
+  onpopupReset(){
+    let arr = this.data.popupData
+    for (let i = 0; i < arr.length; i++) {
+      for (var j = 0; j < arr[i].content.length; j++) {
+        arr[i].content[j].id=0
+      }
+    }
+    this.setData({
+      popupData: arr
+    })
+  },
+
+  onselectDetail(e){
+    let a = e.currentTarget.dataset.id
+    // console.log(a.charAt(0));
+    let arr = this.data.popupData
+    if(a.charAt(0) === '1'){
+      if(arr[1].content[a.charAt(1)].id === 0){
+        for (let i = 0; i < arr[1].content.length; i++) {
+          arr[1].content[i].id=0
+        }
+        arr[a.charAt(0)].content[a.charAt(1)].id=1
+        this.setData({
+          popupData: arr
+        })
+      }else{
+        arr[a.charAt(0)].content[a.charAt(1)].id=0
+        this.setData({
+          popupData: arr
+        })
+      }
+    }else{
+      if(arr[a.charAt(0)].content[a.charAt(1)].id === 0){
+        arr[a.charAt(0)].content[a.charAt(1)].id=1
+        this.setData({
+          popupData: arr
+        })
+      }else{
+        arr[a.charAt(0)].content[a.charAt(1)].id=0
+        this.setData({
+          popupData: arr
+        })
+      }
+    }
+  }
+})

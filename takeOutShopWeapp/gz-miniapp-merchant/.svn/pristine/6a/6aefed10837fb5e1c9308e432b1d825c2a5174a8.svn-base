@@ -1,0 +1,22 @@
+<view class="container">
+  <view>
+    <van-cell-grou custom-class="dis">
+      <van-cell title="关于我们" is-link bind:click="bindAboutUs" />
+      <van-cell title="最新版本" is-link bind:click="onUpgradeVersion"/>
+    </van-cell-grou>
+    <van-cell-group custom-class="dis">
+      <van-cell title="清除消息记录" is-link />
+      <van-cell title="切换账号" is-link bind:click="onchangeuser" />
+    </van-cell-group>
+    <van-button  custom-class="xx-button xx-button__block close" bind:click="logout">退出登录</van-button>
+  </view>
+  <van-action-sheet
+    show="{{ actionShow }}"
+    actions="{{ actions }}"
+    close-on-click-overlay
+    cancel-text="取消"
+    bind:select="onSelect"
+    bind:close="onClose"
+    bind:cancel="onClose">
+  </van-action-sheet>
+</view>

@@ -1,0 +1,32 @@
+<view class="container">
+  <view class="">
+    <van-cell title="提款金额" value="" />
+    <van-field
+    value="{{ drawMoeny }}"
+    placeholder="请输入提款金额"
+    label="¥"
+    bind:change="onDrawBalanceChange"
+  />
+    <van-cell title="账户可提现余额{{cashBalance}}" >
+      <view class="slot-content">
+        <text bindtap="onallDrawBalance">全部提现</text>
+      </view>
+    </van-cell>
+  </view>
+  <view class="header">
+    <van-cell title="提款到" value="" />
+    <van-cell title="银行卡" bindtap="">
+      <view slot="icon">
+        <text class="iconfont icon-card icon-dis"></text>
+      </view>
+      <view>
+        <van-icon name="passed" color="red"/>
+      </view>
+    </van-cell>
+    <van-cell wx:if="{{cardCount === 0}}" title="新建银行卡提现账户" value="" icon="add-o" is-link bindtap="oneditAccount" />
+    <van-cell wx:else title="{{cardDetail.bankName}}" value="{{cardDetail.bankCardNo}}" is-link bindtap="ondrawAccount" />
+  </view>
+  <view class="btn">
+    <van-button type="warning" size="large" bindtap="onconfrimDraw">确认提现</van-button>
+  </view>
+</view>

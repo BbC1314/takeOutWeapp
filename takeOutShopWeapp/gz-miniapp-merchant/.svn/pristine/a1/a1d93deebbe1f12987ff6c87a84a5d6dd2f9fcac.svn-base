@@ -1,0 +1,17 @@
+<view class="container">
+  <gz-tab id="tab" custom-class="van-hairline--bottom" bind:select="selectTab"></gz-tab>
+  <swiper current="{{activeIndex}}" style="height: {{scrollHeight}}" scroll-y="{{true}}" bindchange="bindchange" >
+    <swiper-item >
+      <scroll-view scroll-y="{{true}}" style="height: {{scrollHeight}}" >
+        <all-order class="van-hairline--top-bottom" bind:click="onorderDetail"></all-order>
+        <all-order class="van-hairline--top-bottom" bind:click="onorderDetail"></all-order>
+      </scroll-view>
+    </swiper-item>
+    <swiper-item >
+      <no-order></no-order>
+    </swiper-item>
+    <swiper-item >3</swiper-item>
+    <swiper-item >4</swiper-item>
+    <swiper-item >5</swiper-item>
+  </swiper>
+</view>

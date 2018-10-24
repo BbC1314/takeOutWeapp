@@ -1,0 +1,123 @@
+/**app.wxss**/
+@import './assets/styles/iconfont.wxss';
+@import 'miniprogram_npm/vant-weapp/common/index.wxss';
+
+page {
+  -webkit-font-smoothing: antialiased;
+  font-family: 'PingHei', 'Helvetica Neue', 'Helvetica', 'Arial', 'Verdana',
+    'sans-serif';
+  font-size: 28rpx;
+  background: #f4f6f9;
+  color: #333333;
+  box-sizing: border-box;
+}
+
+.container {
+  min-height: 100vh;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+.page-wrapper {
+  padding: 0 20rpx;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+/* 公用字体 */
+.font-32-c{
+  font-size: 32rpx;
+  color: #333333
+}
+
+.font-32-r{
+  font-size: 32rpx;
+  color: #fd4830
+}
+
+.font-24-r{
+  font-size: 24rpx;
+  color: #fd4830
+}
+
+.font-28-r{
+  font-size: 24rpx;
+  color: #fd4830
+}
+
+.font-28-6{
+  font-size: 28rpx;
+  color: #666666
+}
+
+.font-28-b{
+  font-size: 28rpx
+}
+
+.font-24-9{
+  font-size: 24rpx;
+  color: #666666
+}
+
+.font-24-3{
+  font-size: 24rpx;
+  color: #333333
+}
+
+.gz-cell-group {
+  margin-top: 10px;
+}
+
+.gz-grade-tag {
+  font-size: 28rpx;
+  background: #fd6d33;
+  padding: 4px 20rpx;
+  border-radius: 20px;
+}
+
+.gz-grade-tag.van-hairline--surround::after {
+  border-radius: 20px;
+  border: 0 solid #ffffff;
+  border-width: 1px;
+}
+
+/* 优惠字体 */
+.tag-first {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #ffffff;
+  height: 28rpx;
+  width: 28rpx;
+  background-color: #fbb143;
+}
+
+.tag-full {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #ffffff;
+  height: 28rpx;
+  width: 28rpx;
+  background-color: #fb4830;
+}
+
+.tag-te {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #ffffff;
+  height: 28rpx;
+  width: 28rpx;
+  background-color: #02afff;
+}
+
+
+/* 公共按钮样式 */
+.wrap .van-button{
+  height: 80rpx;
+  border-radius: 40rpx;
+  font-size: 32rpx;
+  color: #ffffff;
+  border: none
+}
+

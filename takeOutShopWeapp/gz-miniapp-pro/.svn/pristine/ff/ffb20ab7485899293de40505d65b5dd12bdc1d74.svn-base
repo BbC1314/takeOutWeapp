@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "账单流水",
+  "usingComponents": {
+    "i-load-more": "../../../components/load-more/index"
+  }
+}

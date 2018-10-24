@@ -1,0 +1,54 @@
+import { request, getUid } from '../../../utils/util'
+
+const app = getApp()
+
+Page({
+  data: {
+    uid: '',
+    actionShow: false,
+    actions: [
+      {
+        name: '退出登录'
+      }
+    ]
+  },
+  onLoad () {
+    this.setData({
+      uid: getUid()
+    })
+  },
+  bindAboutUs () {
+    wx.navigateTo({
+      url :'../aboutUs/aboutUs'
+    })
+  },
+
+  onUpgradeVersion () {
+    wx.navigateTo({
+      url: '../upgradeVersion/upgradeVersion'
+    })
+  },
+
+  logout () {
+    this.setData({
+      actionShow: true
+    })
+  },
+  onSelect (e) {
+    wx.clearStorageSync()
+    app.globalData.uid = ''
+    wx.reLaunch({
+      url: '/pages/index/index'
+    })
+  },
+  onClose () {
+    this.setData({
+      actionShow: false
+    })
+  },
+  onchangeuser(){
+    wx.navigateTo({
+      url:"/pages/login/login"
+    })
+  }
+})

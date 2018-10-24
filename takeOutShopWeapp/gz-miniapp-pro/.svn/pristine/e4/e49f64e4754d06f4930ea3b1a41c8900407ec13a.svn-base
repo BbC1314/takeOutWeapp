@@ -1,0 +1,95 @@
+// pages/dailyOrder/dailyOrder.js
+import {request, getRid} from '../../utils/util'
+import Tab from '../../components/tab/index'
+
+Page({
+  data: {
+    activeIndex: 1,
+    tabData: {
+      selectedId: 1,
+      list: [
+        { id: 1, title: '完成(0)' },
+        { id: 2, title: '取消(0)' }
+      ]
+    },
+    scrollHeight: '150px',
+    rid: '',
+    achieveOrder: '',
+    cancelOrder: ''
+  },
+  onLoad (options) {
+    this.setData({
+      rid: getRid()
+    })
+    this.getDispathOrderList()
+  },
+
+  getDispathOrderList () {
+    Promise.all([
+        request('getWaitForDispathOrderList', {
+        service: 'gz.fyd.dispath',
+        orderType: 'XSDC',
+        status: 1,
+        rid: this.data.rid
+      }),
+      request('getWaitForDispathOrderList', {
+        service: 'gz.fyd.dispath',
+        orderType: 'XSDC',
+        status: 2,
+        rid: this.data.rid
+      })
+    ]).then( r => {
+      let data = r[1].data.rs
+      for (let i in data){
+        data[i].YN=true
+      }
+      this.setData({
+        'tabData.list[0].title': `待取货(${r[0].data.count})`,
+        'tabData.list[1].title': `待取货(${r[1].data.count})`,
+        cancelOrder: r[0].data.rs,
+        achieveOrder: r[1].data.rs
+      })
+      console.log(this.data.achieveOrder);
+      console.log(this.data.cancelOrder);
+    }).then( () => {
+      this.loadTabs()
+    })
+  },
+
+  loadTabs () {
+    Tab._init('#tab', this.data.tabData)
+    wx.getSystemInfo({
+      success: res => {
+        const query = wx.createSelectorQuery()
+        query.select('#tab').boundingClientRect()
+        query.exec(r => {
+          this.setData({
+            scrollHeight: res.windowHeight - r[0].height + 'px'
+          })
+        })
+      }
+    })
+  },
+  selectTab (e) {
+    const data = e.detail
+    this.setData({
+      activeIndex: data.id
+    })
+  },
+  activeChange (e) {
+    const data = e.detail
+    this.setData({
+      'tabData.selectedId': Number(data.currentItemId)
+    })
+    Tab._init('#tab', this.data.tabData)
+  },
+
+  orderDetail (e) {
+    let orderId = e.detail.orderid
+    console.log(orderId);
+    // this.setOrderDispathStatus(orderId)
+    wx.navigateTo({
+      url: `/pages/orderDetail/orderDetail?orderId=${orderId}`
+    })
+  }
+})

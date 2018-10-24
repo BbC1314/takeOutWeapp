@@ -1,0 +1,15 @@
+<view class="container">
+  <view class="title van-hairline--bottom">
+    <text >{{title}}</text>
+  </view>
+  <view class="content">
+    <van-field label="卡号" value="{{ card.bankCardNo }}" type="number" placeholder="请输入银行卡号" bind:change="onChangeNum"/>
+    <van-field label="姓名" value="{{ card.cardholder }}" placeholder="请输入姓名" bind:change="onChangeName"/>
+    <van-field label="开户银行" value="{{ card.bankName }}" placeholder="请输入开户银行" bind:change="onChangeType"/>
+    <van-field label="开户网点" value="{{ card.bankDeposit }}" placeholder="请输入开户网点" bind:change="onChangeArea"/>
+  </view>
+  <view class="footer">
+    <van-button type="default" bindtap="oncancel">取消</van-button>
+    <van-button type="warning" bindtap="oncomfrim">确定</van-button>
+  </view>
+</view>

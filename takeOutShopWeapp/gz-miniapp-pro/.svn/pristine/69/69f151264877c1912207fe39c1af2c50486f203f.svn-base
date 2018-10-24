@@ -1,0 +1,8 @@
+Component({
+  properties: {
+    content: {
+      type: String,
+      value: '没有数据'
+    }
+  }
+})

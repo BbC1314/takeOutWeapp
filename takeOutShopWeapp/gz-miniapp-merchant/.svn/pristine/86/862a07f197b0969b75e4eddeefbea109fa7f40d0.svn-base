@@ -1,0 +1,23 @@
+<view class="container">
+  <!-- 头部切换查看栏 -->
+  <view>
+    <text>预</text>
+    <van-tabbar active="{{ active }}" fixed="{{false}}">
+      <van-tabbar-item icon="shop">标签</van-tabbar-item>
+      <van-tabbar-item icon="chat" dot>标签</van-tabbar-item>
+    </van-tabbar>
+    <icon type="search" color="#00ff00"></icon>
+  </view>
+  <!-- 主体 -->
+  <view>
+    <van-tabs active="{{ active }}" bind:change="onChange">
+      <van-tab title="全部">
+        <!-- <template is="newOrder"></template> -->
+      </van-tab>
+      <van-tab title="进行中">内容 2</van-tab>
+      <van-tab title="已完成">内容 3</van-tab>
+      <van-tab title="已取消/退单">内容 4</van-tab>
+      <van-tab title="索赔">内容 5</van-tab>
+    </van-tabs>
+  </view>
+</view>

@@ -1,0 +1,55 @@
+.item-left-img{
+  width: 100rpx;
+  height: 100rpx;
+  border-radius: 50%;
+  margin-right: 20rpx
+}
+
+.attention-item {
+  padding: 20rpx 30rpx;
+  display: flex;
+  justify-content: space-between;
+  background-color: #ffffff
+}
+
+.item-right{
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  margin: 10rpx;
+  overflow: hidden;
+}
+
+.active{
+  color: red;
+}
+
+.hint{
+  text-align: center;
+  margin-top: 50rpx
+}
+
+.item-message{
+  font-size: 20rpx;
+  margin-top: 10rpx;
+  color: #999999
+}
+
+.action-btn{
+  width: 100rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #7ed7d3;
+  color: #ffffff
+}
+
+.item-right-wrap{
+  display: flex;
+  justify-content: space-between
+}
+
+/* swipeout的样式 */
+.msg-slot .attention-item{
+  padding: 0
+}

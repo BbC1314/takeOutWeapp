@@ -1,0 +1,10 @@
+<view class="wrap">
+  <view class="font32">
+    <text class="">【账号登录信息】</text>
+    <text class="">登陆成功,在上海市 上海市 嘉定区 ,登录方式: 用户密码登录</text>
+  </view>
+  <view class="">
+    <text class="font-99 van-hairline--right">2018-10-12 21:50:42</text>
+    <text class="font-99">ryht1014</text>
+  </view>
+</view>

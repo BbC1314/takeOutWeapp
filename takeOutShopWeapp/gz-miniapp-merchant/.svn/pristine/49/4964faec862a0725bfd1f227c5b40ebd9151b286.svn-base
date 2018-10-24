@@ -1,0 +1,51 @@
+{
+  "pages": [
+    "pages/order/order",
+    "pages/query/query",
+    "pages/manage/manage",
+    "pages/orderDetail/orderDetail",
+    "pages/dailyOrder/dailyOrder",
+    "pages/mineChildren/setting/setting",
+    "pages/mineChildren/myWallet/myWallet",
+    "pages/mineChildren/billDetail/billDetail",
+    "pages/mineChildren/myEvaluate/myEvaluate",
+    "pages/mineChildren/myData/myData",
+    "pages/mineChildren/credit/credit",
+    "pages/mineChildren/drawMoney/drawMoney",
+    "pages/mineChildren/drawAccount/drawAccount",
+    "pages/mineChildren/editAccount/editAccount",
+    "pages/mineChildren/ticketRule/ticketRule",
+    "pages/mineChildren/operationLog/operationLog"
+  ],
+  "window": {
+    "backgroundColor": "#f4f6f9",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "福优多商家版",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "color": "#abb4bf",
+    "selectedColor": "#fd4830",
+    "backgroundColor": "#fff",
+    "list": [
+      {
+        "pagePath": "pages/order/order",
+        "text": "订单管理",
+        "iconPath": "./assets/icon/order02.png",
+        "selectedIconPath": "./assets/icon/order01.png"
+      },
+      {
+        "pagePath": "pages/query/query",
+        "text": "订单查询",
+        "iconPath": "./assets/icon/waiting02.png",
+        "selectedIconPath": "./assets/icon/waiting01.png"
+      },
+      {
+        "pagePath": "pages/manage/manage",
+        "text": "管理",
+        "iconPath": "./assets/icon/me02.png",
+        "selectedIconPath": "./assets/icon/me01.png"
+      }
+    ]
+  }
+}

@@ -1,0 +1,45 @@
+<view class="container">
+  <merchant-show></merchant-show>
+  <view class="title">
+    <view class="title-left" bindtap="onmyWallet">
+      <text class="font-40">132.55</text>
+      <text class="">今日预计收入</text>
+    </view>
+    <view class="title-right" bindtap="ondailyOrder">
+      <text class="font-40">6</text>
+      <text class="">有效单</text>
+    </view>
+  </view>
+  <!-- <view class="nav">
+    <view wx:for="{{navList}}" wx:key="index" class="nav-item">
+      <image class="nav-img" src="{{item.imgUrl}}"/>
+      <text >{{item.title}}</text>
+    </view>
+  </view> -->
+  <view class="activity">
+    <van-cell wx:for="{{navList}}"
+    wx:key="index"
+    title="{{item.title}}"
+    center
+    is-link
+    data-index="{{index}}"
+    bindtap="onskipNav">
+      <view slot="icon">
+        <image class="icon-img"
+        src="{{item.imgUrl}}" />
+      </view>
+    </van-cell>
+  </view>
+    <view class="activity-bottom">
+      <van-cell title="账号与安全" is-link bindtap="onmyData">
+        <view slot="icon">
+          <text class="iconfont icon-key icon-right-dis"></text>
+        </view>
+      </van-cell>
+      <van-cell title="操作日志" is-link bindtap="onoperationLog">
+        <view slot="icon">
+          <text class="iconfont icon-log icon-right-dis"></text>
+        </view>
+      </van-cell>
+    </view>
+</view>

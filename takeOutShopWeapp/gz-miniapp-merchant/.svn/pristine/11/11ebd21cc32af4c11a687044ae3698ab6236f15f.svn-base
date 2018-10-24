@@ -1,0 +1,8 @@
+{
+"navigationBarTitleText": "订单处理",
+"navigationBarBackgroundColor": "#c9ba83",
+"navigationBarTextStyle": "white",
+"usingComponents": {
+    "gz-tab": "../../components/tab/index"
+  }
+}

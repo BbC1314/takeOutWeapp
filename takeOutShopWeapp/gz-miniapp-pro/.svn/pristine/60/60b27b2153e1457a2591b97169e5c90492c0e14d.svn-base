@@ -1,0 +1,36 @@
+.item{
+  background-color: #ffffff
+}
+
+.footer{
+  margin-top: 10px;
+  background-color: #ffffff;
+}
+
+.footer-item{
+  width: 710rpx;
+  padding: 10px 20rpx
+}
+
+.item-top{
+  display: flex;
+  margin-top: 10px
+}
+
+.item-top-left{
+  width: 70%
+}
+
+.item-top-right{
+  width: 30%;
+  text-align: right
+}
+
+.item-bottom-left{
+  width: 50%
+}
+
+.item-bottom-right{
+  width: 50%;
+  text-align: right
+}

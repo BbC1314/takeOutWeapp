@@ -1,0 +1,291 @@
+.warp, .body, .order-card{
+  margin: 20rpx;
+  background-color: #ffffff;
+  box-shadow: 0 2px 12px 0 rgba(0, 0, 0, 0.1);
+}
+
+.title, .content, .footer{
+  padding: 20rpx
+}
+
+.title{
+  display: flex;
+  justify-content: space-between;
+}
+
+.title-left{
+  display: flex;
+}
+
+.title-left-num{
+  width: 132rpx;
+  height: 58rpx;
+  line-height: 64rpx;
+  text-align: center;
+  background: url('http://oss.gaius.cn/cf85364a1424a725ed268f68ff8c04cc.o6zAJsxAanAQ-gXWgOJvZ5caqbxU') 
+              no-repeat 
+              scroll 
+              center center / 95% 
+              content-box content-box;
+}
+
+.title-right{
+  width: 136rpx;
+  height: 40rpx;
+  line-height: 40rpx;
+  border: 1px solid #fe8400;
+  border-radius: 8rpx;
+  display: flex;
+}
+
+.title-right-img{
+  width: 40rpx;
+  height: 40rpx;
+  background-color: #fe8400;
+}
+
+.content-top, .content-top-left{
+  display: flex;
+  margin-bottom: 20rpx;
+  align-items: center;
+}
+
+.content--imag{
+  width: 48rpx;
+  height: 48rpx;
+  margin: 0 20rpx
+}
+
+.content-top{
+  justify-content: space-between
+}
+
+.footer{
+  display: flex;
+  justify-content: space-between
+}
+
+.tag{
+  font-size: 20rpx;
+  height: 25rpx;
+  line-height: 25rpx;
+  padding: 0 20rpx;
+  border: 1rpx solid;
+  border-radius: 5rpx;
+}
+
+.hairline{
+  border-bottom: 1rpx solid #eeeeee;
+}
+
+
+.font-fe-20{
+  font-size: 20rpx;
+  color: #fe8400;
+}
+
+.font-99-24{
+  font-size: 24rpx;
+  color: #999999;
+}
+
+.font-66-28{
+  font-size: 28rpx;
+  color: #666666;
+}
+
+.font-30{
+  font-size: 30rpx;
+  font-weight: 550;
+}
+
+.font-ff-40{
+  font-size: 36rpx;
+  color: #ffffff;
+  font-weight: 550
+}
+
+.font-66-24{
+  font-size: 24rpx;
+  color: #666666;
+}
+
+.font-fd-32{
+  font-size: 32rpx;
+  color: #fd4830;
+}
+
+.dis{
+  margin-left: 18rpx
+}
+
+.tag-general{
+  color: #0090ff;
+  border-color: #0090ff
+}
+
+.tag-special{
+  color: #f19716;
+  border-color: #f19716
+}
+
+/* orderDetail样式 */
+.container {
+  padding: 0 20rpx;
+}
+
+.order-card {
+  margin-top: 10px;
+  /* box-shadow: 0 2px 12px 0 rgba(0, 0, 0, 0.1); */
+}
+
+.order-card:last-child {
+  margin-bottom: 10px;
+}
+
+.thumb-img {
+  width: 200rpx;
+  height: 200rpx;
+}
+
+.thumb-size {
+  height: 200rpx;
+}
+
+.item-image {
+  margin-right: 20rpx;
+}
+
+.order-content-img {
+  width: 64rpx;
+  height: 64rpx;
+  display: block;
+}
+
+.order-content-rdis {
+  margin-left: 30rpx;
+}
+
+.item-sku {
+  color: #666666;
+  font-size: 24rpx;
+}
+
+.solt-title,
+.order-content-detail {
+  display: flex;
+  align-items: center;
+}
+
+.order-content-detail {
+  flex-direction: row-reverse;
+}
+
+.order-state {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #ffffff;
+  border-radius: 5rpx;
+}
+
+.order-state-title {
+  margin: 32rpx 0;
+  font-size: 40rpx;
+  color: #333333;
+  font-weight: 500;
+}
+
+.oeder-state-time {
+  margin-bottom: 32rpx;
+  font-size: 28rpx;
+  color: #666666;
+}
+
+.oeder-state-sendtime {
+  color: #fd4830;
+  padding: 0 10rpx;
+}
+
+.order-state-btn {
+  display: flex;
+  padding: 32rpx 0;
+}
+
+.order-state-btn .btn-dis {
+  width: 128rpx;
+  height: 56rpx;
+  margin: 0 10rpx;
+  padding: 0;
+  font-size: 24rpx;
+  color: #666666;
+}
+
+.order-state-sendman {
+  width: 100%;
+  height: 88rpx;
+  border-top: 1px solid #eeeeee;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.sendman__img {
+  width: 48rpx;
+  height: 48rpx;
+  border-radius: 50%;
+  margin: 0 20rpx;
+}
+
+.sendman-img {
+  display: flex;
+  align-items: center;
+}
+
+.icon-sm-my-tele {
+  font-size: 48rpx;
+  margin-right: 20rpx;
+}
+
+.tag-dis {
+  margin-right: 20rpx;
+}
+
+.slot {
+  display: flex;
+}
+
+.cell-title {
+  font-size: 30rpx;
+  font-weight: 500;
+}
+
+
+/* 优惠字体 */
+.tag-common{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #ffffff;
+  height: 28rpx;
+  width: 28rpx;
+  padding: 5rpx;
+}
+
+.tag-first {
+  background-color: #fbb143;
+}
+
+.tag-full {
+  background-color: #fb4830;
+}
+
+.tag-te {
+  background-color: #02afff;
+}
+
+.tag-tableware {
+  background-color: #2baa3f;
+}
+
+

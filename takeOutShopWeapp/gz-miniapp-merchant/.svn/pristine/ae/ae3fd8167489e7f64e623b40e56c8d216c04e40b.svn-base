@@ -1,0 +1,18 @@
+<!--pages/dailyOrder/dailyOrder.wxml-->
+<view class="container">
+  <gz-tab id="tab" custom-class="van-hairline--bottom" bind:select="selectTab"></gz-tab>
+  <swiper current-item-id="{{activeIndex}}" style="height: {{scrollHeight}}" bindchange="activeChange">
+    <!-- 完成单 -->
+    <swiper-item item-id="{{1}}">
+      <scroll-view class="page-wrapper" scroll-y style="height: {{scrollHeight}}">
+        <achieveOrder-item wx:for="{{cancelOrder}}" wx:key="index" item="{{item}}" bind:click="orderDetail"></achieveOrder-item>
+      </scroll-view>
+    </swiper-item>
+    <!-- 取消单 -->
+    <swiper-item item-id="{{2}}">
+      <scroll-view class="page-wrapper" scroll-y style="height: {{scrollHeight}}">
+        <achieveOrder-item wx:for="{{achieveOrder}}" wx:key="index" item="{{item}}" bind:click="orderDetail"></achieveOrder-item>
+      </scroll-view>
+    </swiper-item>
+  </swiper>
+</view>

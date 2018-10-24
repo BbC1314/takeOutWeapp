@@ -1,0 +1,13 @@
+.wrap .van-cell__title{
+  max-width: 30%;
+}
+
+.dis-top{
+  margin-top: 20rpx;
+}
+
+.shop-img{
+  width: 70rpx;
+  height: 70rpx;
+  border-radius: 10rpx;
+}

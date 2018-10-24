@@ -1,0 +1,11 @@
+{
+  "navigationBarTitleText": "提现账户",
+  "usingComponents": {
+    "van-cell": "vant-weapp/cell/index",
+    "van-cell-group": "vant-weapp/cell-group/index",
+    "van-icon": "vant-weapp/icon/index",
+    "van-field": "vant-weapp/field/index",
+    "van-button": "vant-weapp/button/index",
+    "van-dialog": "vant-weapp/dialog/index"
+  }
+}

@@ -1,0 +1,21 @@
+<view class="container">
+  <view class="header">
+    <view class="header-left">
+      <view class="header-left__num">99</view>
+      <text class="">当前信用分</text>
+    </view>
+  </view>
+  <view class="footer">
+    <van-cell title="信用分明细" value=""  />
+    <view class="footer-item van-hairline--top-bottom">
+      <view class="item-top font-32-c">
+        <view class="item-top-left van-ellipsis">订单丢失</view>
+        <view class="item-top-right">-1</view>
+      </view>
+      <view class="item-top font-24-9">
+        <view class="item-bottom-left van-ellipsis">2018-10-28 06:54</view>
+        <!-- <view class="item-bottom-right">预计在10-29号到账</view> -->
+      </view>
+    </view>
+  </view>
+</view>

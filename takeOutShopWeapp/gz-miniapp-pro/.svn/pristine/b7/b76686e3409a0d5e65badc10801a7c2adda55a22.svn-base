@@ -1,0 +1,16 @@
+<view class="container">
+  <date-tab newDate="2018-10-10" bind:click="ondateSelect"></date-tab>
+  <view class="item">
+    <view wx:for="{{withdrawOrderList}}" wx:key="index" class="footer-item van-hairline--top-bottom" data-orderid="{{item.orderId}}" bindtap="onselectDetail">
+      <view class="item-top font-32-c">
+        <view class="item-top-left van-ellipsis">{{item.bankName}}</view>
+        <view class="item-top-right">{{item.auditFlag === 1 ? '-' : '+'}}{{item.amount}}</view>
+      </view>
+      <view class="item-top font-24-9">
+        <view class="item-bottom-left van-ellipsis">{{item.created_at}}</view>
+        <view class="item-bottom-right">预计{{item.closeTime}}到账</view>
+      </view>
+    </view>
+    <i-load-more hidden="{{ noMoreData || loading }}" loading="{{ loading }}" />
+  </view>
+</view>

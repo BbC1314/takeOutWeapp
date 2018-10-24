@@ -1,0 +1,33 @@
+<view class="container">
+  <!-- 头部 -->
+  <view>
+    <text>订单处理中</text>
+  </view>
+  <!-- 主体内容 -->
+  <view>
+    <van-tabs active="{{ active }}" bind:change="onChange">
+      <van-tab title="新订单">
+        <template is="newOrder"></template>
+      </van-tab>
+      <van-tab title="配送异常">内容 2</van-tab>
+      <van-tab title="催单">内容 3</van-tab>
+      <van-tab title="取消单">内容 4</van-tab>
+      <van-tab title="退款">内容 5</van-tab>
+    </van-tabs>
+  </view>
+</view>
+
+<!-- 模版 -->
+<!-- 新订单 -->
+<template name="newOrder">
+  <view>
+    <view>
+      <text>自动接单</text>
+      <switch></switch>
+    </view>
+    <view>暂无新订单</view>
+  </view>
+  <view>
+    <view>暂无待出餐</view>
+  </view>
+</template>

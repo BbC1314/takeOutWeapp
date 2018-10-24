@@ -1,0 +1,31 @@
+<view class="container">
+  <view class="">
+    <van-cell title="提款金额" value="" />
+    <van-field
+    value="{{ value }}"
+    placeholder="请输入提款金额"
+    label="¥"
+    bind:change="onChange"
+  />
+    <van-cell title="账户可提现余额6888" >
+      <view class="slot-content">
+        <text >全部提现</text>
+      </view>
+    </van-cell>
+  </view>
+  <view class="header">
+    <van-cell title="提款到" value="" />
+    <van-cell title="银行卡" bindtap="ondrawAccount">
+      <view slot="icon">
+        <text class="iconfont icon-card icon-dis"></text>
+      </view>
+      <view>
+        <van-icon name="passed" color="red" />
+      </view>
+    </van-cell>
+    <van-cell title="新建银行卡提现账户" value="" icon="add-o" is-link bindtap="oneditAccount" />
+  </view>
+  <view class="btn">
+    <van-button type="warning" size="large">确认提现</van-button>
+  </view>
+</view>

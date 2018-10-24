@@ -1,0 +1,18 @@
+.title-date{
+  display: flex;
+  justify-content: space-around;
+  padding: 10px 0
+}
+
+.date{
+  width: 30%;
+  text-align: center
+}
+
+.color{
+  color: red
+}
+
+.pop{
+  padding: 10px 20rpx
+}

@@ -1,0 +1,113 @@
+// pages/test/index.js
+Page({
+  data: {
+    students: [
+      {
+        id: 1,
+        name: 'tom',
+        age: 13
+      },
+      {
+        id: 2,
+        name: '阿尼尔',
+        age: 18
+      },
+      {
+        id: 3,
+        name: '演戏太多',
+        age: 15
+      }
+    ],
+    objArray: [
+      { id: 1, unique: 'unique_1' },
+      { id: 0, unique: 'unique_0' }
+    ]
+  },
+  onLoad: function (options) {
+    console.log('index页面onLoad')
+  },
+  onReady: function () {
+    console.log('index页面onReady')
+  },
+  onShow: function () {
+    // console.log('index页面显示')
+  },
+  onHide: function () {
+    // console.log('index页面隐藏')
+  },
+  onUnload: function () {
+    // console.log('index页面卸载')
+  },
+  onPullDownRefresh: function () {
+
+  },
+  onReachBottom: function () {
+
+  },
+  onShareAppMessage: function () {
+
+  },
+  handleDetail () {
+    console.log(getCurrentPages())
+    wx.navigateTo({
+      url: 'test',
+      params: {
+        id: 12306
+      }
+    })
+    // 注意: navigateTo redirectTo 只能打开费tabBar页面
+    // switchTab只能打开tabBar页面
+    // reLaunch可以打开任意页面
+    // 页面底部的tabBar由页面决定,即只要是定义为tabBar的页面,底部都有tabBar
+    // 调用页面路由带的参数可以在目标页面的onLoad中获取
+  },
+  getRandom (min, max) {
+    return min + Math.floor(Math.random()*(max + 1))
+  },
+  // wx:key
+  switch () {
+    // 打乱 shuffle
+    let arr = []
+    let { objArray } = this.data
+    let temp
+    // console.log(arr.indexOf(1))
+    // while (true) {
+    //   temp = this.getRandom(0, objArray.length - 1)
+    //   if (arr.indexOf(temp) === -1) {
+    //     arr.push(temp)
+    //     if (arr.length === objArray.length) {
+    //       break
+    //     }
+    //   }
+    // }
+    // objArray = arr.map(v => objArray[v])
+    /**
+     * 方式二
+     * 产生随机索引进行交换
+     */
+    let len = objArray.length
+    let x,y
+    for (let i = 0; i < len; i++) {
+      x = this.getRandom(0, len - 1)
+      y = this.getRandom(0, len - 1)
+      temp = objArray[x]
+      objArray[x] = objArray[y]
+      objArray[y] = temp
+    }
+    // console.log(arr)
+    this.setData({
+      objArray
+    })
+  },
+  addToFront () {
+    let {objArray} = this.data
+    objArray.unshift({
+      id: objArray.length,
+      unique: 'unique_' + objArray.length
+    })
+    this.setData({
+      objArray
+    })
+    console.log(this.data)
+  }
+})

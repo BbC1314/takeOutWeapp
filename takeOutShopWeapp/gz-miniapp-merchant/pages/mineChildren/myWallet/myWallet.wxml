@@ -1,0 +1,39 @@
+<view class="container">
+  <view class="header">
+    <view class="header-left">
+      <text class="">今日预计收入(元)</text>
+      <view class="header-left__num">{{cash.todayIncoming}}</view>
+    </view>
+    <view class="header-left">
+      <text class="">今日预计支出</text>
+      <view class="header-left__num">{{cash.todayOutcoming}}</view>
+    </view>
+  </view>
+  <view class="middle van-hairline--bottom">
+    <text>我的余额(元)</text>
+    <view class="middle-content">
+      <view class="middle-content__left">
+        <text class="middle-left__num dis">{{cash.cashBalance}}</text>
+        <van-icon custom-class="value-icon" name="arrow" size="24rpx"></van-icon>
+      </view>
+      <van-button type="default" bindtap="ondrawMoney">去提现</van-button>
+    </view>
+    <text class="">还有{{cash.pendingIncoming}}即将到账(含今日的预支出)</text>
+  </view>
+  <view class="pledge">
+    <van-cell title="保证金" is-link bindtap="onpledge"/>
+  </view>
+  <view class="footer">
+    <van-cell title="今日收入明细" value="历史明细" is-link bindtap="billDetail" />
+    <view wx:for="{{withdrawOrderList}}" wx:key="index" class="footer-item van-hairline--top-bottom">
+      <view class="item-top font-32-c">
+        <view class="item-top-left van-ellipsis">{{item.bankName}}</view>
+        <view class="item-top-right">{{item.auditFlag ===1 ? '-' : '+'}}{{item.amount}}</view>
+      </view>
+      <view class="item-top font-24-9">
+        <view class="item-bottom-left van-ellipsis">{{item.created_at}}</view>
+        <view class="item-bottom-right">预计{{item.closeTime}}到账</view>
+      </view>
+    </view>
+  </view>
+</view>

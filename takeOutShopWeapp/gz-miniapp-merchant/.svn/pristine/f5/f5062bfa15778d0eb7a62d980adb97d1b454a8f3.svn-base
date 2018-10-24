@@ -1,0 +1,12 @@
+<view class="container">
+  <view class="footer">
+    <van-cell title="名字" value="{{userInfo.nickName}}" />
+    <van-cell title="工号" value="{{userInfo.id}}" />
+  </view>
+  <view class="footer">
+    <van-cell title="手机号" value="{{userInfo.mobile}}" is-link />
+    <van-cell title="身份证" value="生效中" /> 
+    <!-- <van-cell custom-class="i-font" title="健康证" value="未上传" is-link />
+    <van-cell title="设置密码" value="56789" is-link /> -->
+  </view>
+</view>

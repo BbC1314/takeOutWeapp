@@ -1,0 +1,118 @@
+<view class="warp" data-orderid="1" bindtap="onorderDetail">
+  <view class="title hairline">
+    <view class="title-left">
+      <view class="title-left-num">
+        <text class="font-ff-40">#164</text>
+      </view>
+      <!-- <view class="title-left-time font-99-24 dis">
+        <view >下单时间:</view>
+        <view >10:12</view>
+      </view> -->
+    </view>
+    <view class="title-right">
+      <image class="title-right-img"
+      src="../../assets/images/order/slice.png" />
+      <text class="font-fe-20 dis">送餐中</text>
+    </view>
+  </view>
+  <view class="content hairline ">
+    <view class="content-top">
+      <view class="content-top-left">
+        <text class="">李先生</text>
+        <view class="tag dis tag-general">普通会员</view>
+      </view>
+      <view class="content-top-right">
+        <image class="content--imag" src="../../assets/images/order/locate.png" />
+        <image class="content--imag" src="../../assets/images/order/tele.png" />
+      </view>
+    </view>
+    <view class="content-buttom">
+      <van-tag type="primary">1.8km</van-tag>
+      <text >浦东新区世纪大道1号</text>
+    </view>
+  </view>
+  <view class="footer">
+    <view class="font-99-24">
+      <view class="footer-item">
+        <text class="">19:35</text>
+        <text class="dis">已送达</text>
+      </view>
+      <view class="footer-item">
+        <text class="">19:35</text>
+        <text class="dis">已送达</text>
+      </view>
+      <view class="footer-item">
+        <text class="">19:35</text>
+        <text class="dis">已送达</text>
+      </view>
+    </view>
+    <view >
+      <text class="font-fd-24">骑手:</text>
+      <text class="font-fd-24">王磊</text>
+      <text class="iconfont icon-sm-my-tele dis"></text>
+    </view>
+  </view>
+</view>
+
+<view class="body">
+  <van-cell-group>
+    <van-cell title-class="cell-title" title="商品明细" center>
+    </van-cell>
+    <block wx:for="{{3}}" wx:key="index">
+      <van-cell border="{{true}}" center>
+        <view slot="title">
+          <view class="solt-title">
+            <view class="item-image">
+              <image class="order-content-img" lazy-load mode="aspectFill" src="../../assets/images/order/1534931810718.jpg" />
+            </view>
+            <view>
+              <view>牛肉面</view>
+              <view class="item-sku" wx:if="{{item.skuInfo}}">{{ item.skuInfo }}</view>
+            </view>
+          </view>
+        </view>
+        <view class="order-content-detail">
+          <view class="order-content-rdis">
+            ￥35
+          </view>
+          <view >
+            ×2
+          </view>
+        </view>
+      </van-cell>
+    </block>
+    <block wx:for="{{tagList}}" wx:key="item" wx:for-item="i">
+      <van-cell border="{{true}}" center>
+        <view slot="title">
+          <view class="solt-title">
+            <text class="{{i.classIcon}} tag-common content tag-dis">{{ i.icon }}</text>
+            <view>
+              <text>{{ i.icontext }}</text>
+            </view>
+          </view>
+        </view>
+        <view class="order-content-detail">
+          <view class="order-content-rdis">{{ i.price }}</view>
+        </view>
+      </van-cell>
+    </block>
+    <van-cell border>
+      <text class="font-b-sliod-content">实收：￥233</text>
+    </van-cell>
+  </van-cell-group>
+</view>
+
+<view class="order-card order-info">
+  <van-cell-group>
+    <van-cell title-class="cell-title" title="订单信息" value="" />
+    <van-cell title="订单号">
+      542186512645123 {{orderDetail.orderId}}
+    </van-cell>
+    <van-cell title="下单时间">
+      2018-10-16 19:51{{ orderDetail.created_at }}
+    </van-cell>
+    <van-cell title="完成时间">
+      2018-10-16 19:51{{ orderDetail.endTime_at }}
+    </van-cell>
+  </van-cell-group>
+</view>

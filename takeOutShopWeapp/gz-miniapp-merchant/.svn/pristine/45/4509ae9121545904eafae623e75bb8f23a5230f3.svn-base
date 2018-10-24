@@ -1,0 +1,9 @@
+{
+  "navigationBarTitleText":"我的消息",
+  "usingComponents":{
+    "van-icon": "vant-weapp/icon/index",
+    "van-popup": "vant-weapp/popup/index",
+    "van-search": "vant-weapp/search/index",
+    "swipeout": "../../components/swipeout/index"
+  }
+}

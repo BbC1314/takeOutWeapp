@@ -1,0 +1,27 @@
+<van-cell-group border="{{false}}" data-id="{{item.orderId}}" bindtap="orderDetail">
+  <van-cell center border="{{false}}">
+    <view slot="title" >
+      <view class="new-icon">新</view>
+      <text class="slot-dis font-28-b">剩余</text>
+      <text class="font-28-r">100分钟</text>
+    </view>
+    <view class="font-32-r"><text class="font-24-r">$</text>7.5</view>
+  </van-cell>
+  <van-cell  center border="{{false}}" value=""  >
+    <view slot="title" class="slot-wrap" >
+      <view class="slot-title-dis slot-title-wrap"><text class="font-12">12</text> <text class="font-12">km</text></view>
+      <view >
+        <view >{{item.name}}</view>
+        <view class="font-28-6">{{item.province}}{{item.city}}{{item.area}}</view>
+      </view>
+    </view>
+  </van-cell>
+  <van-cell  center border="{{false}}" value=""  >
+    <view slot="title" >
+      <view class="slot-title-wrap">
+        <view class="slot-title-dis"><text class="font-12">12</text> <text class="font-12">km</text></view>
+        <text >{{item.address}}</text>
+      </view>
+    </view>
+  </van-cell>
+</van-cell-group>

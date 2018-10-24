@@ -1,0 +1,83 @@
+.shop-item {
+  display: flex;
+  background-color: #ffffff;
+  padding: 0 20rpx
+}
+
+.shop-title {
+  font-weight: 500;
+}
+
+.shop-item__left {
+  margin-right: 20rpx;
+  padding: 16px 0;
+}
+
+.shop-item__left .shop-image {
+  width: 128rpx;
+  height: 128rpx;
+  display: block;
+  border-radius: 5px;
+}
+
+.shop-item__right {
+  flex: 1;
+  padding: 16px 0;
+  overflow: hidden;
+}
+
+.shop-item__right .shop-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* .shop-content {
+  margin-top: 1px;
+} */
+
+.shop-content.flex-start {
+  justify-content: flex-start;
+}
+
+.shop-content .content,
+.shop-content .content__border,
+.shop-content .iconfont {
+  font-size: 24rpx;
+}
+
+.content + .content {
+  margin-left: 10rpx;
+}
+
+.shop-content .content__border {
+  margin-left: 10rpx;
+  padding-left: 10rpx;
+}
+
+.shop-content .content.fraction-value {
+  color: #fa541c;
+}
+
+.content-preferential {
+  color: #666666;
+}
+
+
+
+
+/* gz商家版修改及添加的页面 */
+.tag-dis{
+  margin-right: 20rpx;
+}
+
+.tag{
+  margin-top: 10rpx;
+  margin-bottom: -7rpx;
+}
+
+.add-price{
+  font-size: 32rpx;
+  color: #fd4830;
+  margin-top: 10rpx;
+}

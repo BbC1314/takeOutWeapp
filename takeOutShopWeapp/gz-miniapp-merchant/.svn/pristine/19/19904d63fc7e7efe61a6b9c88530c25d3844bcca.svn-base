@@ -1,0 +1,28 @@
+<view class="container">
+  <view class="title">
+    <view class="title-left">
+      <text class="font-40">132.55</text>
+      <text class="">今日预计收入</text>
+    </view>
+    <view class="title-right">
+      <text class="font-40">6</text>
+      <text class="">有效单</text>
+    </view>
+    <text class="iconfont icon-go"></text>
+  </view>
+  <view class="nav">
+    <view wx:for="{{4}}" wx:for-index="index" class="nav-item">
+      <image class="nav-img" src="../../assets/images/order/tele.png"/>
+      <text >商品</text>
+    </view>
+  </view>
+  <view class="activity">
+    <view class="activity-item">
+      <van-cell title="我的活动" is-link/>
+      <van-cell title="店铺优惠" is-link/>
+      <van-cell title="店铺推广" is-link/>
+      <van-cell title="顾客中心" is-link/>
+      <van-cell title="我的活动" is-link/>
+    </view>
+  </view>
+</view>

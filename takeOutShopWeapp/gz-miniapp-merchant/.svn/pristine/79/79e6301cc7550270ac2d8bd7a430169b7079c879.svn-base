@@ -1,0 +1,40 @@
+<view class="container">
+  <view wx:for="{{cardList}}" wx:key="index" class="card" data-id="{{item.id}}" data-index="{{index}}" bindtap="onselectCard">
+    <view class="card-header">
+      <view class="card-header-left">
+        <text class="iconfont icon-card dis"></text>
+        <view >
+          <view >{{item.cardholder}}</view>
+          <view >{{item.bankName}}</view>
+        </view>
+      </view>
+      <view class="card-header-right">
+        <van-icon wx:if="{{item.yn}}" name="passed" color="#ffffff" />
+      </view>
+    </view>
+    <view class="card-footer">
+      <view class="footer-left">
+        {{item.bankCardNo}}
+      </view>
+      <view class="footer-right">
+        <text class="dis" data-id="{{item.id}}" catchtap="oneditAccount">编辑</text>
+        <text data-id="{{item.id}}" catchtap="ondeleteCard">删除</text>
+      </view>
+    </view>
+  </view>
+  <view class="btn">
+    <van-button type="warning" size="large" bindtap="onaddAccount">新建提款账户</van-button>
+  </view>
+
+  <!-- 弹出框 -->
+  <van-dialog
+    custom-class="dialog"
+    title="确定删除该银行卡"
+    use-slot
+    show="{{ show }}"
+    show-cancel-button
+    bind:close="onClose"
+    bind:confirm="onconfirm"
+  >
+  </van-dialog>
+</view>

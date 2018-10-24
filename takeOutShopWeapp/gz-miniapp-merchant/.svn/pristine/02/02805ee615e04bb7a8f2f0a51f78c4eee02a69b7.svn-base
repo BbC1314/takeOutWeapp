@@ -1,0 +1,10 @@
+// pages/query/index.js
+Page({
+  data: {
+    active: 0
+  },
+  // 事件处理函数
+  onChange ($event) {
+    // 
+  }
+})

@@ -1,0 +1,46 @@
+<view class="shop-item van-hairline--bottom" data-sp-id="{{item.spId}}" data-itemid="{{item.itemId}}" bindtap="shopDetail">
+  <view class="shop-item__left">
+    <image
+      class="shop-image van-hairline--surround"
+      lazy-load
+      mode="aspectFill"
+      src="{{item.avatar || imageUrl}}"
+    />
+  </view>
+  <view class="shop-item__right {{ border ? 'van-hairline--bottom' : '' }}">
+    <view class="shop-title van-ellipsis">
+      <text class="">{{ item.name }}竞价推广优化神奇</text>
+    </view>
+    <view class="shop-content">
+      <view class="shop-content__left">
+        <i-rate i-class="content" value="5" disabled></i-rate>
+        <text class="content">{{ item.rank }}</text>
+        <text class="content">月售{{ item.monthlySaleVolumn ? item.monthlySaleVolumn : 0 }}单</text>
+      </view>
+      <!-- <view class="shop-content__right">
+        <text class="content">{{ item.distance }}</text>
+        <text class="content__border van-hairline--left">40分钟</text>
+      </view> -->
+    </view>
+    
+    <view class="tag">
+      <van-tag custom-class="tag-dis" plain type="danger">销量最高</van-tag>
+      <van-tag plain type="primary">0元使用</van-tag>
+    </view>
+  
+    <!-- <view class="shop-content flex-start">
+      <text class="content">起送¥{{ item.startingPrice ? item.startingPrice : 0 }}</text>
+      <text class="content__border van-hairline--left">配送费¥{{ item.distributionCost ? item.distributionCost : 0 }}</text>
+    </view> -->
+    <view class="shop-content flex-start content-preferential">
+      <!-- <text class="tag-first content">首</text> -->
+      <text class="content">有效果才是硬道理</text>
+    </view>
+    <view class="shop-content flex-start content-preferential">
+      <!-- <text class="tag-full content">减</text>
+      <text class="content">满40减18</text>
+      <text class="content">满60减28</text> -->
+      <text class="add-price">¥233.33</text>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,34 @@
+// pages/order/index.js
+Page({
+  data: {
+    active: 0
+  },
+  onLoad: function (options) {
+
+  },
+  onReady: function () {
+
+  },
+  onShow: function () {
+
+  },
+  onHide: function () {
+
+  },
+  onUnload: function () {
+
+  },
+  onPullDownRefresh: function () {
+
+  },
+  onReachBottom: function () {
+
+  },
+  onShareAppMessage: function () {
+
+  },
+  // 事件处理函数
+  onChange (val) {
+    // console.log(val)
+  }
+})

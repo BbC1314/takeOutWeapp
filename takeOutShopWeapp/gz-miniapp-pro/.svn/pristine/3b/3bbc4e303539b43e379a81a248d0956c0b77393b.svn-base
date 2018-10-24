@@ -1,0 +1,46 @@
+// pages/dailyOrder/dailyOrder.js
+import Tab from '../../components/tab/index'
+
+Page({
+  data: {
+    activeIndex: 1,
+    tabData: {
+      selectedId: 1,
+      list: [
+        { id: 1, title: '完成(0)' },
+        { id: 2, title: '取消(0)' }
+      ]
+    },
+    scrollHeight: '150px'
+  },
+  onLoad (options) {
+    this.loadTabs()
+  },
+  loadTabs () {
+    Tab._init('#tab', this.data.tabData)
+    wx.getSystemInfo({
+      success: res => {
+        const query = wx.createSelectorQuery()
+        query.select('#tab').boundingClientRect()
+        query.exec(r => {
+          this.setData({
+            scrollHeight: res.windowHeight - r[0].height + 'px'
+          })
+        })
+      }
+    })
+  },
+  selectTab (e) {
+    const data = e.detail
+    this.setData({
+      activeIndex: data.id
+    })
+  },
+  activeChange (e) {
+    const data = e.detail
+    this.setData({
+      'tabData.selectedId': Number(data.currentItemId)
+    })
+    Tab._init('#tab', this.data.tabData)
+  }
+})

@@ -1,0 +1,79 @@
+import {request, getRid} from '../../../utils/util'
+
+Page({
+  data: {
+    rid: '',
+    cardCount: 0,
+    id: 0,
+    cardDetail: {},
+    editToNew: false
+  },
+
+  onLoad () {
+    this.setData({
+      rid: getRid()
+    })
+    this.getRiderBankCardList()
+  },
+
+  onShow () {
+    let id = this.data.id
+    if (id > 0){
+      this.getRiderBankCardDetail(this.data.id)
+    }
+    if (this.data.editToNew) {
+      this.getRiderBankCardList()
+    }
+  },
+
+  getRiderBankCardList () {
+    request('getRiderBankCardList', {
+      rid: this.data.rid,
+      service: 'gz.fyd.dispath'
+    }).then( r => {
+      let count = r.data.count
+      console.log(r.data.count);
+      this.setData({
+        cardCount: count,
+      })
+      if (count > 0) {
+        this.setData({
+          id: r.data.rs[0].id
+        })
+        console.log(this.data.cardCount);
+        if ( count > 0) {
+          this.getRiderBankCardDetail(this.data.id)
+        }
+      }
+    })
+  },
+
+  getRiderBankCardDetail (id) {
+    console.log(this.data.id);
+    request('getRiderBankCardDetail', {
+      id:this.data.id,
+      rid: this.data.rid,
+      service: 'gz.fyd.dispath'
+    }).then( r => {
+      this.setData({
+        cardDetail: r.data
+      })
+      console.log(r.data);
+    })
+  },
+
+  ondrawAccount () {
+    this.setData({
+      editToNew: false
+    })
+    wx.navigateTo({
+      url: '/pages/mineChildren/drawAccount/drawAccount'
+    })
+  },
+
+  oneditAccount () {
+    wx.navigateTo({
+      url: '/pages/mineChildren/editAccount/editAccount'
+    })
+  } 
+})

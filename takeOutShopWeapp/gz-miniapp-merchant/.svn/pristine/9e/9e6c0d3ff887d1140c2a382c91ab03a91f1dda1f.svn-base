@@ -1,0 +1,15 @@
+<view class="wrap">
+  <van-cell-group>
+    <van-cell title="门店头像" center is-link bindtap="onpreviewImage">
+      <image class="shop-img"
+      src="{{imgUrl}}" />
+    </van-cell>
+    <van-cell title="门店名称" value="如意混沌(胜利广场店)" />
+    <van-cell title="门店ID" value="159410484" />
+  </van-cell-group>
+  <van-cell-group custom-class="dis-top">
+    <van-cell title="订餐电话" value="15324402195" />
+    <van-cell title="门店地址" value="临泉路8号罗马花园16号楼第14间" />
+    <van-cell title="门店品类" value="主营: 饺子混沌 , 次营: 简餐" />
+  </van-cell-group>
+</view>

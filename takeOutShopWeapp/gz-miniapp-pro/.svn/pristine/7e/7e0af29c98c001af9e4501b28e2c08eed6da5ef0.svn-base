@@ -1,0 +1,5 @@
+/* pages/dailyOrder/dailyOrder.wxss */
+.page-wrapper{
+  padding: 0
+}
+

@@ -1,0 +1,7 @@
+{
+  "component": true,
+  "usingComponents": {
+    "i-rate": "../../components/rate/index",
+    "van-tag": "/miniprogram_npm/vant-weapp/tag/index"
+  }
+}

@@ -1,0 +1,28 @@
+<!-- <view class="container">
+  <button bindtap="change">改变</button> -->
+  <!-- <view wx:if="{{condition}}">条件渲染</view> -->
+  <!-- <block wx:if="{{condition}}">
+    <view wx:if="{{grade > 90}}">很好</view>
+    <view wx:elif="{{grade >= 60}}">不错</view>
+    <view wx:else="{{grade < 60}}">死垃圾</view>
+    <view hidden="{{true}}"><text>the tex</text></view>
+  </block>
+  <template is="msg" data="{{...sh}}"></template>
+</view> -->
+<!-- 模板拥有自己的作用域,只能使用data传入的数据以及模版定义文件中定义的<wxs/>模块 -->
+<!-- <template name="msg">
+  <view>the template----</view>
+  <button>{{btn}}</button>
+</template> -->
+
+
+
+<!-- 事件 -->
+<view class="container">
+  <view>事件</view>
+  <canvas></canvas>
+</view>
+
+
+
+

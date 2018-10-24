@@ -1,0 +1,4 @@
+<!--index.wxml-->
+<view class="container">
+  <gz-tab id="tab" custom-class="van-hairline--bottom" bind:select="selectTab"></gz-tab>
+</view>

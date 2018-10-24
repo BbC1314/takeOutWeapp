@@ -1,0 +1,8 @@
+{
+  "navigationBarTitleText": "我的罚单",
+  "usingComponents": {
+    "gz-tab": "../../components/tab/index",
+    "ticket-item": "../../components/ticket-item/index",
+    "van-popup": "vant-weapp/popup/index"
+  }
+}

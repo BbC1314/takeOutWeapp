@@ -1,0 +1,42 @@
+<view class="warp" data-orderid="1" bindtap="onorderDetail">
+  <view class="title hairline">
+    <view class="title-left">
+      <view class="title-left-num">
+        <text class="font-ff-40">#164</text>
+      </view>
+      <view class="title-left-time font-99-24 dis">
+        <view >下单时间:</view>
+        <view >10:12</view>
+      </view>
+    </view>
+    <!-- <view class="title-right slice">
+      <image class="title-right-img"
+      src="../../assets/images/order/slice.png" />
+      <text class="font-fe-20 dis">送餐中</text>
+    </view>
+    <view class="title-right tick">
+      <image class="title-right-img tick-back"
+      src="../../assets/images/order/tick.png" />
+      <text class="font-fe-20 dis">已送达</text>
+    </view> -->
+    <view class="title-right time">
+      <image class="title-right-img time-back"
+      src="../../assets/images/order/time.png" />
+      <text class="font-fe-20 dis">出餐中</text>
+    </view>
+  </view>
+  <view class="content hairline ">
+    <view class="content-top">
+      <text class="">李先生</text>
+      <view class="tag dis tag-common">普通会员</view>
+    </view>
+    <view class="content-buttom">浦东新区世纪大道1号</view>
+  </view>
+  <view class="footer">
+    <text class="font-66-28">玉米鲜肉大混沌+皮蛋瘦肉粥等5件商品</text>
+    <view >
+      <text class="font-fd-24">¥</text>
+      <text class="font-fd-32">233</text>
+    </view>
+  </view>
+</view>

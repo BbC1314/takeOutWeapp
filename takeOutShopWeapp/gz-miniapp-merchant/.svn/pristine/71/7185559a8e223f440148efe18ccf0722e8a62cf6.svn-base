@@ -1,0 +1,23 @@
+// pages/test/index.js
+// Page({
+//   data: {
+//     condition: true,
+//     grade: 93,
+//     sh: {
+//       btn: '哈哈'
+//     }
+//   },
+//   onLoad () {
+//     console.log('加载完成')
+//   },
+//   change () {
+//     // console.log('改变---')
+//     this.setData({
+//       condition: !this.data.condition
+//     })
+//   }
+// })
+
+Page({
+  
+})

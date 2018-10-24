@@ -1,0 +1,21 @@
+Page({
+  data: {
+
+  },
+
+  onLoad () {
+
+  },
+
+  oncomfrim () {
+    wx.navigateBack({
+      delta: 1
+    })
+  },
+
+  oncancel () {
+    wx.navigateBack({
+      delta: 1
+    })
+  }
+})

@@ -1,0 +1,18 @@
+.wrap{
+  padding: 30rpx 40rpx;
+  background-color: #ffffff;
+  margin: 10rpx;
+  box-shadow: 0 2px 12px 0 rgba(0, 0, 0, 0.1);
+}
+
+.font32{
+  font-size: 32rpx;
+  font-weight: 550;
+  line-height: 50rpx;
+}
+
+.font-99{
+  display: inline-block;
+  color: #999999;
+  width: 50%;
+}

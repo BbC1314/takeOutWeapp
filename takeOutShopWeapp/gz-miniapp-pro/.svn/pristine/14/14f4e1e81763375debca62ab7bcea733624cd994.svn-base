@@ -1,0 +1,21 @@
+Page({
+  data: {
+
+  },
+
+  onLoad () {
+
+  },
+
+  onaddAccount () {
+    wx.navigateTo({
+      url: '/pages/mineChildren/editAccount/editAccount?type=add'
+    })
+  },
+
+  oneditAccount () {
+    wx.navigateTo({
+      url: '/pages/mineChildren/editAccount/editAccount?type=edit'
+    })
+  } 
+})

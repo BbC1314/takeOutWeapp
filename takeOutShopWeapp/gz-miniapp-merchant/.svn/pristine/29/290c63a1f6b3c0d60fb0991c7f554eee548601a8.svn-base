@@ -1,0 +1,144 @@
+.warp{
+  margin: 20rpx;
+  background-color: #ffffff;
+  box-shadow: 0 2px 12px 0 rgba(0, 0, 0, 0.1);
+}
+
+.title, .content, .footer{
+  padding: 20rpx
+}
+
+.title{
+  display: flex;
+  justify-content: space-between;
+}
+
+.title-left{
+  display: flex;
+}
+
+.title-left-num{
+  width: 132rpx;
+  height: 58rpx;
+  line-height: 64rpx;
+  text-align: center;
+  background: url('http://oss.gaius.cn/cf85364a1424a725ed268f68ff8c04cc.o6zAJsxAanAQ-gXWgOJvZ5caqbxU') 
+              no-repeat 
+              scroll 
+              center center / 95% 
+              content-box content-box;
+}
+
+.title-right{
+  width: 136rpx;
+  height: 40rpx;
+  line-height: 40rpx;
+  border: 1px solid #fe8400;
+  border-radius: 8rpx;
+  display: flex;
+}
+
+.title-right-img{
+  width: 40rpx;
+  height: 40rpx;
+  background-color: #fe8400;
+}
+
+.content-top{
+  display: flex;
+  margin-bottom: 20rpx;
+  align-items: center;
+}
+
+.footer{
+  display: flex;
+  justify-content: space-between
+}
+
+.tag{
+  font-size: 20rpx;
+  height: 25rpx;
+  line-height: 25rpx;
+  padding: 0 20rpx;
+  border: 1rpx solid;
+  border-radius: 5rpx;
+}
+
+.hairline{
+  border-bottom: 1rpx solid #eeeeee;
+}
+
+
+.font-fe-20{
+  font-size: 20rpx;
+}
+
+.slice{
+  color: #fe8400;
+  border-color: #fe8400;
+}
+
+.time{
+  color: #fd4830;
+  border-color: #fd4830;
+}
+
+.tick{
+  color: #2baa3f;
+  border-color: #2baa3f;
+}
+
+.time-back{
+  background-color: #fd4830;
+}
+
+.tick-back{
+  background-color: #2baa3f;
+  
+}
+
+.font-99-24{
+  font-size: 24rpx;
+  color: #999999;
+}
+
+.font-66-28{
+  font-size: 28rpx;
+  color: #666666;
+}
+
+.font-30{
+  font-size: 30rpx;
+  font-weight: 550;
+}
+
+.font-ff-40{
+  font-size: 36rpx;
+  color: #ffffff;
+  font-weight: 550
+}
+
+.font-fd-24{
+  font-size: 24rpx;
+  color: #fd4830;
+}
+
+.font-fd-32{
+  font-size: 32rpx;
+  color: #fd4830;
+}
+
+.dis{
+  margin-left: 18rpx
+}
+
+.tag-common{
+  color: #0090ff;
+  border-color: #0090ff
+}
+
+.tag-special{
+  color: #f19716;
+  border-color: #f19716
+}
+

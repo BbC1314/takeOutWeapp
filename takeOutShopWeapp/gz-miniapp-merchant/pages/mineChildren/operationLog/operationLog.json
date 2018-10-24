@@ -1,0 +1,8 @@
+{
+  "navigationBarTitleText": "操作日志",
+  "navigationBarBackgroundColor": "#c9ba83",
+  "usingComponents": {
+    "gz-tab": "../../../components/tab/index",
+    "opreation-log": "../../../components/opreation-log/index"
+  }
+}

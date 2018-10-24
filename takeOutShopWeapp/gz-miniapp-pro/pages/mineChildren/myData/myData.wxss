@@ -1,0 +1,16 @@
+.footer{
+  margin-top: 10px
+}
+
+.footer .van-cell__title{
+  font-size: 32rpx;
+  font-weight: 600
+}
+
+.footer .van-cell__value{
+  color: #999999
+}
+
+.i-font .van-cell__value{
+  color: chocolate
+}

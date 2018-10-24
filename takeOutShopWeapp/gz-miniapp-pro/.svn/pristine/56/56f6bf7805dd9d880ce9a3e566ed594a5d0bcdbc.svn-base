@@ -1,0 +1,35 @@
+// pages/mine/mine.js
+Page({
+  data: {
+    show: false,
+    actions: [
+      { name: '接单', value: 0 },
+      { name: '休假', value: 1 }
+    ],
+    statusMap: {
+      0: '接单中',
+      1: '休假中'
+    },
+    status: 0
+  },
+  onLoad (options) {
+
+  },
+  changeStatus () {
+    this.setData({
+      show: true
+    })
+  },
+  onClose (e) {
+    this.setData({
+      show: false
+    })
+  },
+  onSelect (e) {
+    const value = e.detail.value
+    this.setData({
+      status: value,
+      show: false
+    })
+  }
+})

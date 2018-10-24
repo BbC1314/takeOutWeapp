@@ -1,0 +1,15 @@
+<view class="container">
+  <view class="title van-hairline--bottom">
+    <text >增加银行卡提现账户</text>
+  </view>
+  <view class="content">
+    <van-field label="卡号" value="{{ value }}" placeholder="请输入银行卡号" bind:change="onChange"/>
+    <van-field label="姓名" value="{{ value }}" placeholder="请输入姓名" bind:change="onChange"/>
+    <van-field label="开户银行" value="{{ value }}" placeholder="请输入开户银行" bind:change="onChange"/>
+    <van-field label="开户网点" value="{{ value }}" placeholder="请输入开户网点" bind:change="onChange"/>
+  </view>
+  <view class="footer">
+    <van-button type="default" bindtap="oncancel">取消</van-button>
+    <van-button type="warning" bindtap="oncomfrim">确定</van-button>
+  </view>
+</view>

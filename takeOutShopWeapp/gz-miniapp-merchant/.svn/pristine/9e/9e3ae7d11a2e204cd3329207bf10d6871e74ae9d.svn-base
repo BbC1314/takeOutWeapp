@@ -1,0 +1,46 @@
+{
+  "pages": [
+    "pages/order/index",
+    "pages/query/index",
+    "pages/manage/index",
+    "pages/setting/index",
+    "pages/test/index"
+  ],
+  "window": {
+    "backgroundColor": "#f4f6f9",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "福优多商家版",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "color": "#abb4bf",
+    "selectedColor": "#fd4830",
+    "backgroundColor": "#fff",
+    "list": [
+      {
+        "pagePath": "pages/order/index",
+        "text": "订单管理",
+        "iconPath": "./assets/icon/order02.png",
+        "selectedIconPath": "./assets/icon/order01.png"
+      },
+      {
+        "pagePath": "pages/query/index",
+        "text": "订单查询",
+        "iconPath": "./assets/icon/waiting02.png",
+        "selectedIconPath": "./assets/icon/waiting01.png"
+      },
+      {
+        "pagePath": "pages/manage/index",
+        "text": "管理",
+        "iconPath": "./assets/icon/me02.png",
+        "selectedIconPath": "./assets/icon/me01.png"
+      },
+      {
+        "pagePath": "pages/setting/index",
+        "text": "设置",
+        "iconPath": "./assets/icon/waiting02.png",
+        "selectedIconPath": "./assets/icon/me01.png"
+      }
+    ]
+  }
+}

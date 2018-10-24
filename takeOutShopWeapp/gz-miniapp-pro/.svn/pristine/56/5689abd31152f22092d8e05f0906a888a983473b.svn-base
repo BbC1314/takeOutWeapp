@@ -1,0 +1,22 @@
+Page({
+  data: {
+    type:'',
+    stateTitle:['未接单','已接单','骑手正在赶往商店','骑手已上路','已送达'],
+    stateTime:'16:99',
+    sendmanName:'张家辉',
+    sendmanIconUrl:'https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1536903956853&di=f98afdcd918e886c32a956424bb5278b&imgtype=0&src=http%3A%2F%2Fi1.hdslb.com%2Fbfs%2Farchive%2F7df8bb2899434ed75fe212b63a92a3df053f8b5b.jpg',
+    tagList:[
+      {classIcon:'tag-full' , icon:'减' , icontext:'红包' , price:'-5.3'},
+      {classIcon:'tag-te' , icon:'首' , icontext:'减满优惠' , price:'-0.1'},
+      {classIcon:'tag-first' , icon:'特' , icontext:'在线支付立减优惠' , price:'+10'}
+    ]
+  },
+  onload(query){
+    var stateTitleId=getApp().orderDetail1
+    console.log(stateTitleId);
+    this.setData({
+      type:query.type
+    })
+    console.log(stateTitleId);
+  }
+})

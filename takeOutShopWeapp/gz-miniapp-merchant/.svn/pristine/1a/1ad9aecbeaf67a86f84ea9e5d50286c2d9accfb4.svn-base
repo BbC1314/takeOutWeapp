@@ -1,0 +1,15 @@
+{
+  "usingComponents": {
+    "gz-tab": "../../components/tab/index",
+    "van-cell": "vant-weapp/cell/index",
+    "van-cell-group": "vant-weapp/cell-group/index",
+    "van-button": "vant-weapp/button/index",
+    "van-tag": "vant-weapp/tag/index",
+    "van-dialog": "vant-weapp/dialog/index",
+    "van-field": "vant-weapp/field/index",
+    "van-popup": "vant-weapp/popup/index",
+    "order-item": "../../components/order-item/index",
+    "getOrder-item": "../../components/getOrder-item/index",
+    "i-load-more": "../../components/load-more/index"
+  }
+}

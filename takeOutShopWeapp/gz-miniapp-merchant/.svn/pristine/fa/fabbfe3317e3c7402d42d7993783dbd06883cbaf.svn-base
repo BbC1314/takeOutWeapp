@@ -1,0 +1,8 @@
+<view class="container">
+  <view>{{title}}</view>
+  <button class="change-btn" bindtap="changeTitle">改变</button>
+  <view>
+    <text>{{books[0].name}}</text>
+  </view>
+  <button bindtap="handleBack">返回</button>
+</view>

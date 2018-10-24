@@ -1,0 +1,11 @@
+Page({
+  data:{
+
+  },
+
+  billDetail () {
+    wx.navigateTo({
+      url: '/pages/mineChildren/billDetail/billDetail'
+    })
+  }
+})

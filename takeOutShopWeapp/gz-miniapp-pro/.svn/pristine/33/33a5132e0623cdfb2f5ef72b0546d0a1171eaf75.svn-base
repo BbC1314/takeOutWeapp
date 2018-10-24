@@ -1,0 +1,111 @@
+<view class="container container-wrap">
+  <scroll-view scroll-y="{{true}}" style="height:{{windowHeight}}">
+    <view class="order-state">
+      <view >
+        <text class="iconfont icon-shijian dis"></text>
+        <text >剩余26分钟(17:59前到达)</text>
+      </view>
+      <van-button wx:if="{{orderStatus === 2}}"
+      type="danger"
+      bindtap="oncancelOrder">取消订单</van-button>
+  </view>
+
+  <view class="order-send">订单配送</view>
+  <view class="discuss-info">
+    <van-cell-group>
+
+      <van-cell>
+        <view slot="title">
+            <van-tag custom-class="address-content-dis" type="success">始</van-tag>
+        </view>
+        <view class="slot-content1"><text >{{orderDetail.mechant.name}}</text> <text class="iconfont icon-daohang"></text></view>
+        <view class="address-title">
+          {{orderDetail.mechant.address}}
+        </view>
+      </van-cell>
+      <van-cell>
+        <view slot="title">
+            <van-tag custom-class="address-content-dis" type="danger">终</van-tag>
+        </view>
+        <view class="slot-content1 "><text class="">王栓蛋 1456215521455</text> <text class="iconfont icon-daohang"></text></view>
+        <view class="address-title ">
+          <text class="address-content address-content-dis address-phone">{{orderDetail.mechant.address}}</text>
+          <!-- <text class=" address-phone">1456215521455</text> -->
+        </view>
+      </van-cell>
+      <view class="orderSend-footer">
+        <text >预计送达时间 {{orderDetail.mechant.endTime}}</text>
+        <text >及供参考</text>
+      </view>
+    </van-cell-group>
+  </view>
+  <view class="order-send">订单信息</view>
+  <van-cell-group>
+      <van-cell>
+        <view class="slot" slot="title">
+          <view class="slot-title">订单号:</view>
+          <view class="slot-content">{{orderDetail.order.orderId}}</view>
+        </view>
+      </van-cell>
+      <van-cell>
+        <view class="slot" slot="title">
+          <view class="slot-title">下单时间:</view>
+          <view class="slot-content">{{orderDetail.order.orderTime}}</view>
+        </view>
+      </van-cell>
+      <van-cell title="立即配送" value="#54" />
+      <van-cell>
+        <view slot="title">
+            备注:
+        </view>
+        <view class=" special-cell">不吃辣</view>
+      </van-cell>
+      <van-cell wx:for="{{orderDetail.order.itemList}}" wx:key="index" border="{{true}}" center>
+        <view slot="title">
+          <view class="solt-title">
+            <view class="order-content-img">
+              <image class="order-content-img" lazy-load mode="aspectFill" src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1536924860767&di=334ad3be6db957af22673a7c4d2bcc9e&imgtype=0&src=http%3A%2F%2Fimages.3158.cn%2Fdata%2Fattachment%2Ftougao%2Farticle%2F2017%2F02%2F12%2F86e7d0908ce1abc72dbeb4396a33dd64.jpg" />
+            </view>
+            <view>
+              <text>{{item.itemName}}</text>
+            </view>
+          </view>
+        </view>
+        <view class="order-content-detail">
+          <view class="order-content-Rdis">￥{{item.itemCount}}</view>
+          <view>×2</view>
+        </view>
+      </van-cell>
+      <van-cell border>
+        <view slot="title">
+        </view>
+        <text class="font-b-sliod-content">实收：￥{{orderDetail.order.itemList[0].itemCount}}</text>
+      </van-cell>
+    </van-cell-group>
+  </scroll-view>
+    <view wx:if="{{btnShow}}" class="wrap">
+      <van-button custom-class="defaule" bindtap="onskipWebview">在线对话</van-button>
+      <van-button custom-class="get-active" bindtap="oncallPhone">联系店家</van-button>
+      <van-button custom-class="send-active"
+      bindtap="onconfirm">{{btnContent}}</van-button>
+    </view>
+
+    <!-- 弹出框 -->
+    <van-dialog
+    custom-class="dialog"
+    title="{{dialogTitle}}"
+    use-slot
+    show="{{ show }}"
+    show-cancel-button
+    bind:close="onClose"
+    bind:confirm="onpopConfrim"
+  >
+  <van-field
+    wx:if="{{orderStatus === 3}}"
+    type="number"
+    value="{{ num }}"
+    maxlength="4"
+  />
+  <view wx:else class="pop-item">取消订单,将会降低信用分和受到现金处罚!!!</view>
+  </van-dialog>
+</view>

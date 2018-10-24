@@ -1,0 +1,95 @@
+/* pages/dailyOrder/dailyOrder.wxss */
+.page-wrapper{
+  padding: 0
+}
+
+.wrap{
+  width: 100%;
+  margin-top: 10rpx
+}
+
+.new-icon{
+  display: inline-block;
+  width: 28rpx;
+  height: 28rpx;
+  line-height: 30rpx;
+  border-radius: 50%;
+  background-color: red;
+  color: #ffffff;
+  font-size: 16rpx;
+  text-align: center;
+  vertical-align: center
+}
+
+.slot-dis{
+  margin: 0 10rpx
+}
+
+
+.slot-title-dis{
+  /* display: flex;
+  flex-direction: column; */
+  font-size: 20rpx;
+  /* padding: 10rpx 0 */
+}
+
+.slot-wrap{
+  display: flex
+}
+
+.font-12{
+  line-height: 20rpx;
+  margin-right: 20rpx
+}
+
+.font-24-r{
+  margin: 0 10rpx
+}
+
+/* 待取货 */
+
+.wrap1{
+  padding: 0 20rpx 24rpx;
+  background-color: #ffffff;
+  margin: 20rpx
+}
+
+.dot-icon{
+  width: 16rpx;
+  height: 16rpx;
+  color: red
+}
+
+.num-tag{
+  height: 28rpx;
+}
+
+.wrap .van-tag{
+  line-height: 28rpx
+}
+
+.send-dis{
+  margin-top: 20rpx
+}
+
+.dot-dis{
+  margin-right: 20rpx
+}
+
+.container .van-cell{
+  padding: 5px 10px
+}
+
+.item-content .van-cell{
+  padding: 5px 20px
+}
+
+.slot-title{
+  font-size: 20rpx;
+  color: #666666
+}
+
+.rate{
+  margin-right: 12rpx;
+  font-size: 30rpx
+}

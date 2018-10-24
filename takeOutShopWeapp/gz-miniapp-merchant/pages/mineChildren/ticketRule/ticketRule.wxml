@@ -1,0 +1,18 @@
+<view class="container">
+  <view class="header van-hairline--bottom">
+    <view wx:for="{{list}}"
+    wx:key="index"
+    class="header-item dis font-28-6 {{ item.id == initId ? 'color' : ''}}"
+    data-id="{{item.id}}"
+    bindtap="onclickBtn"
+    >{{item.title}}</view>
+  </view>
+  <view class="footer">
+    <view class="footer-title dis ">{{title}}</view>
+    <view class="font-28-6 dis">保证金用于配送服务质量担保;</view>
+    <view class="footer-img">
+      <image mode='aspectFit' src="{{url}}"
+      class="img"/>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,14 @@
+<view class="container">
+  <view class="item" wx:for="{{10}}" wx:key="index">
+    <view class="footer-item van-hairline--top-bottom">
+      <view class="item-top font-32-c">
+        <view class="item-top-left van-ellipsis">平台服务费的力困筋乏了看家的说法卢克倒计时了看法就的</view>
+        <view class="item-top-right">-3.00</view>
+      </view>
+      <view class="item-top font-24-9">
+        <view class="item-bottom-left van-ellipsis">2018-10-28 06:54</view>
+        <view class="item-bottom-right">预计在10-29号到账</view>
+      </view>
+    </view>
+  </view>
+</view>

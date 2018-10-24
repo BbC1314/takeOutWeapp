@@ -1,0 +1,5 @@
+{
+  "usingComponents": {
+    "gz-tab": "../../components/tab/index"
+  }
+}

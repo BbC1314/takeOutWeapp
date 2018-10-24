@@ -1,0 +1,19 @@
+<view class="container">
+  <date-tab newDate="{{newDate}}" bind:click="onselectDate"></date-tab>
+  <gz-tab id="tab" custom-class="van-hairline--bottom" bind:select="selectTab"></gz-tab>
+  <swiper current="{{activeIndex}}" style="height: {{scrollHeight}}" scroll-y="{{true}}" bindchange="bindchange" >
+    <swiper-item >
+      <scroll-view scroll-y="{{true}}" style="height: {{scrollHeight}}" >
+        <query-order></query-order>
+      </scroll-view>
+    </swiper-item>
+    <swiper-item >
+      <view class="text"></view>
+      <view class="text van-hairline--top-bottom"></view>
+      <view class="text"></view>
+    </swiper-item>
+    <swiper-item >3</swiper-item>
+    <swiper-item >4</swiper-item>
+    <swiper-item >5</swiper-item>
+  </swiper>
+</view>

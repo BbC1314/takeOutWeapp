@@ -1,0 +1,28 @@
+<view class="container">
+  <view wx:for="{{3}}" wx:key="index" class="card">
+    <view class="card-header">
+      <view class="card-header-left">
+        <text class="iconfont icon-card dis"></text>
+        <view >
+          <view >慕容复</view>
+          <view >大燕商行</view>
+        </view>
+      </view>
+      <view class="card-header-right">
+        <van-icon name="passed" color="#ffffff" />
+      </view>
+    </view>
+    <view class="card-footer">
+      <view class="footer-left">
+        66666666666666666666666
+      </view>
+      <view class="footer-right">
+        <text class="dis" bindtap="oneditAccount">编辑</text>
+        <text >删除</text>
+      </view>
+    </view>
+  </view>
+  <view class="btn">
+    <van-button type="warning" size="large" bindtap="onaddAccount">新建提款账户</van-button>
+  </view>
+</view>

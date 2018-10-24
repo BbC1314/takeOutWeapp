@@ -1,0 +1,38 @@
+.container{
+  margin-top: 10px
+}
+
+.header{
+  width: 100%;
+  text-align: center;
+  padding: 30px 0;
+  background-color: #ffffff
+}
+
+.dis{
+  margin: 10px
+}
+
+.num{
+  font-size: 45rpx;
+}
+
+.pledge{
+  color: blue
+}
+
+.header .van-button--large{
+  width: 90%;
+  border-radius: 50px;
+  margin-top: 20px;
+}
+
+.footer .van-cell{
+  background-color: rgba(00, 00, 00, 0);
+  padding: 10px 10px
+}
+
+.footer .van-cell__value{
+  color: blue
+}
+

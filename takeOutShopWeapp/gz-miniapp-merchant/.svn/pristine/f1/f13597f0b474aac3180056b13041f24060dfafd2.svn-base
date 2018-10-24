@@ -1,0 +1,9 @@
+{
+  "navigationBarTitleText": "店铺管理",
+  "navigationBarBackgroundColor": "#c9ba83",
+  "navigationBarTextStyle": "white",
+  "usingComponents": {
+      "van-cell": "/miniprogram_npm/vant-weapp/cell/index",
+      "merchant-show": "../../components/merchant-show/index"
+    }
+  }

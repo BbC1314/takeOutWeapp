@@ -1,0 +1,12 @@
+<view class="item">
+    <view class="footer-item van-hairline--top-bottom">
+      <view class="item-top font-32-c">
+        <view class="item-top-left van-ellipsis">骑电瓶车,车速超过200码</view>
+        <view class="item-top-right">-12分</view>
+      </view>
+      <view class="item-top font-24-9">
+        <view class="item-bottom-left van-ellipsis">2018-10-28 06:54</view>
+        <view class="item-bottom-right"></view>
+      </view>
+    </view>
+  </view>

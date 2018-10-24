@@ -1,0 +1,26 @@
+<view class="container">
+  <swiper class="swiper"
+  indicator-dots="true"
+  indicator-active-color="#c9ba83"
+  autoplay="true"
+  circular="true">
+    <block wx:for="{{swiperImgUrls}}" wx:key="index">
+      <swiper-item>
+        <image src="{{item}}" class="slide-image" width="375" height="150"/>
+      </swiper-item>
+    </block>
+  </swiper>
+  <view class="navbar">
+    <view wx:for="{{navImgUrls}}" wx:key="index" class="navbar-item">
+      <image class="navbar-img" src="{{navImgUrls[0]}}" />
+      <text >评价优化</text>
+    </view>
+  </view>
+  <view class="content">
+    <van-cell>
+      <view slot="title">热门服务</view>
+    </van-cell>
+    <shop-item></shop-item>
+    <shop-item></shop-item>
+  </view>
+</view>

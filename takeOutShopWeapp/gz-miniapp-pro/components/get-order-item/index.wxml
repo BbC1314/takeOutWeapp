@@ -1,0 +1,29 @@
+<van-cell center border="{{false}}">
+  <view slot="title" >
+    <view class="new-icon dot-icon"></view>
+    <text class="slot-dis font-28-b">剩余</text>
+    <text class="font-28-b">100分钟</text>
+  </view>
+</van-cell>
+<view >
+  <van-cell-group data-id="{{item.orderId}}" bindtap="orderDetail">
+    <van-cell  center border="{{false}}" value=""  >
+      <view slot="title" class="slot-wrap" >
+        <view wx:if="{{!item.YN}}" class="slot-title-dis slot-title-wrap"><text class="font-12">12</text> <text class="font-12">km</text></view>
+        <view wx:else class="slot-title-dis slot-title-wrap send-dis">已取</view>
+        <view class="tag-wrap">
+          <view > <van-tag custom-class="num-tag" center plain>#218</van-tag> {{item.name}}</view>
+          <view class="font-28-6">{{item.province}}{{item.city}}{{item.area}}</view>
+        </view>
+      </view>
+    </van-cell>
+    <van-cell  center border="{{false}}" value=""  >
+      <view slot="title" >
+        <view class="slot-title-wrap">
+          <view class="slot-title-dis"><text class="font-12">12</text> <text class="font-12">km</text></view>
+          <text >{{item.address}}</text>
+        </view>
+      </view>
+    </van-cell>
+  </van-cell-group>
+</view>

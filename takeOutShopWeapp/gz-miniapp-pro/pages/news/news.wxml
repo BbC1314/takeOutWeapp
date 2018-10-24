@@ -1,0 +1,40 @@
+<view class="container">
+  <view class="search">
+    <van-search
+      value="{{ value }}"
+      placeholder="请输入搜索关键词"
+      bind:change="onSearch"
+    />
+  </view>
+  <view wx:if="{{!chatList}}" class="hint">您还没有信息哦,赶快去寻找自己志同道合的道友吧~~~~</view>
+  <block wx:if="{{searchYN}}" wx:for="{{chatList}}" wx:key="item.id">
+    <swipeout i-class="msg-slot" actions="{{ editMsg }}" data-uid="{{item.uid}}" bind:change="ondeleteChat">
+        <view slot="content" class="attention-item van-hairline--bottom" data-pid="{{item.appUid}}" bind:tap="msgDetail">
+          <view class="item-left" data-uid="{{item.appUid}}">
+            <image class="item-left-img" src="{{item.avatar}}"/>
+          </view>
+          <view class="item-right">
+            <view class="item-right-wrap">
+              <view class="">{{item.name}}</view>
+              <view class="item-message">{{item.messageTime}}</view>
+            </view>
+            <view class="item-message van-ellipsis">{{item.lastMessage}}</view>
+          </view>
+        </view>
+    </swipeout>
+  </block>
+  <view >
+    <view wx:if="{{!searchYN}}" class="attention-item van-hairline--bottom" >
+      <view class="item-left" data-uid="{{item.appUid}}" >
+        <image class="item-left-img" src="{{searchMsg[0].avatar}}"/>
+      </view>
+      <view class="item-right">
+        <view >
+          <view >{{searchMsg[0].name}}</view>
+          <view class="item-message">{{searchMsg[0].lastMessage}}</view>
+        </view>
+        <text class="item-message">{{searchMsg[0].messageTime}}</text>
+      </view>
+    </view>
+  </view>
+</view>

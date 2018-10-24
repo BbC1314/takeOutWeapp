@@ -1,0 +1,9 @@
+{
+  "navigationBarTitleText": "服务市场",
+  "navigationBarBackgroundColor": "#c9ba83",
+  "navigationBarTextStyle": "white",
+  "usingComponents": {
+     "shop-item": "../../components/shopItem/index",
+     "van-cell": "/miniprogram_npm/vant-weapp/cell/index"
+    }
+  }

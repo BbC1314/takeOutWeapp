@@ -1,0 +1,64 @@
+.dis {
+  margin-top: 20rpx;
+}
+
+.about-us,
+.us-title,
+.us-content,
+.us-footer {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.about-us {
+  width: 710rpx;
+  margin: 20rpx;
+}
+
+.us-icon {
+  width: 100rpx;
+  height: 100rpx;
+}
+
+.icon {
+  margin: 20rpx;
+}
+
+.us-title {
+  margin-bottom: 20rpx;
+}
+
+.us-footer {
+  margin: 50rpx 0;
+}
+
+.font-title {
+  font-size: 30rpx;
+  font-weight: 500;
+}
+
+.font-content {
+  font-size: 24rpx;
+  color: #000000;
+}
+
+.font-footer {
+  font-size: 24rpx;
+  color: #666666;
+}
+
+.xx-button {
+  margin-top: 20px;
+}
+
+.xx-button.close {
+  background: #ffffff;
+  color: #ff2626;
+}
+
+.container .van-button{
+  width: 100%
+}

@@ -1,0 +1,140 @@
+{
+	"description": "项目配置文件",
+	"packOptions": {
+		"ignore": []
+	},
+	"setting": {
+		"urlCheck": false,
+		"es6": true,
+		"postcss": true,
+		"minified": true,
+		"newFeature": true,
+		"nodeModules": true
+	},
+	"compileType": "miniprogram",
+	"libVersion": "2.3.0",
+	"appid": "wx6331e1917b316995",
+	"projectname": "gz-miniapp-pro",
+	"debugOptions": {
+		"hidedInDevtools": []
+	},
+	"isGameTourist": false,
+	"condition": {
+		"search": {
+			"current": -1,
+			"list": []
+		},
+		"conversation": {
+			"current": -1,
+			"list": []
+		},
+		"plugin": {
+			"current": -1,
+			"list": []
+		},
+		"game": {
+			"currentL": -1,
+			"list": []
+		},
+		"miniprogram": {
+			"current": 15,
+			"list": [
+				{
+					"id": 0,
+					"name": "开发模式",
+					"pathName": "pages/dailyOrder/dailyOrder",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "订单详情",
+					"pathName": "pages/orderDetail/orderDetail",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "dailyOrder",
+					"pathName": "pages/dailyOrder/dailyOrder",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "myWallet",
+					"pathName": "pages/mineChildren/myWallet/myWallet",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "billDetail",
+					"pathName": "pages/mineChildren/billDetail/billDetail",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "myEvaluate",
+					"pathName": "pages/mineChildren/myEvaluate/myEvaluate",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "pledge",
+					"pathName": "pages/mineChildren/pledge/pledge",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "myData",
+					"pathName": "pages/mineChildren/myData/myData",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "mine",
+					"pathName": "pages/mine/mine",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "drawMoney",
+					"pathName": "pages/mine/mine",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "drawMoney",
+					"pathName": "pages/mineChildren/drawMoney/drawMoney",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "drawAccount",
+					"pathName": "pages/mineChildren/drawAccount/drawAccount",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "editAccount",
+					"pathName": "pages/mineChildren/editAccount/editAccount",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "myTicket",
+					"pathName": "pages/myTicket/myTicket",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "tilketRule",
+					"pathName": "pages/mineChildren/ticketRule/ticketRule",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "setting",
+					"pathName": "pages/mineChildren/setting/setting"
+				}
+			]
+		}
+	}
+}

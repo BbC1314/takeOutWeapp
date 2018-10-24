@@ -1,0 +1,15 @@
+<view class="container">
+  <view class="header">
+    <view class="dis num">0.00</view>
+    <view class="dis font-28-6">当前满足保证金免交条件,无需充值</view>
+    <view class="dis font-28-6 pledge">如何免交保证金?</view>
+    <van-button size="large">退保证金到余额</van-button>
+  </view>
+  <view class="footer">
+    <van-cell title="什么是保证金" value="保证金规则" is-link />
+    <view class="dis">1:保证金用于配送服务质量担保;</view>
+    <view class="dis">2:当保证金与待到账之和小于等于-99元,保证金会转入余额;</view>
+    <view class="dis">3:当余额与待到账之和小于0元,差额部分将由保证金作为担当,部分保证金将不可退款</view>
+    <view class="dis">4:保证金仅通过第三方金融账户充值,仅退款至余额</view>
+  </view>
+</view>

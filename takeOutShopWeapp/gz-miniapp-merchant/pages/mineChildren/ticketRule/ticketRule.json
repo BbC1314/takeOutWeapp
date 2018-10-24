@@ -1,0 +1,7 @@
+{
+  "navigationBarTitleText": "奖罚规则",
+  "usingComponents": {
+    "van-button": "vant-weapp/button/index",
+    "van-cell": "vant-weapp/cell/index"
+  }
+}

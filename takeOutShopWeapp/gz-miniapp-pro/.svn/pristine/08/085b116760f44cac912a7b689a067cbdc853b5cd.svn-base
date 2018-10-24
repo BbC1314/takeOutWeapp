@@ -1,0 +1,113 @@
+<view class="container container-wrap">
+  <view class="order-state">
+    <view class="order-state-title">
+      <text >{{stateTitle[3]}}</text>
+    </view>
+    <view class="order-state-time">
+      预计<text class="oeder-state-sendtime">{{stateTime}}</text>送达
+    </view>
+    <view class="order-state-btn">
+      <button class="btn-dis">取消订单</button>
+      <button class="btn-dis">催单</button>
+    </view>
+    <view class="order-state-sendman">
+      <view class="sendman-img">
+        <image class="sendman__img"
+        src="{{sendmanIconUrl}}"
+         />
+        <text >{{sendmanName}}</text>
+      </view>
+      <text class="iconfont icon-sm-my-tele "></text>
+    </view>
+  </view>
+
+  <view class="order-content">
+    <van-cell-group>
+      <van-cell>
+        <view slot="title">
+          <span class="van-cell-text font-b-sliod-content">黄氏南京鸭血粉</span>
+          <!-- <van-tag type="danger">标签</van-tag> -->
+        </view>
+        <van-button size="small" type="primary" plain>再来一单</van-button>
+      </van-cell>
+      <block wx:for="{{3}}" wx:key="item">
+        <van-cell border="{{true}}" center>
+          <view slot="title">
+            <view class="solt-title">
+              <view class="order-content-img">
+                <image class="order-content-img" lazy-load mode="aspectFill" src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1536924860767&di=334ad3be6db957af22673a7c4d2bcc9e&imgtype=0&src=http%3A%2F%2Fimages.3158.cn%2Fdata%2Fattachment%2Ftougao%2Farticle%2F2017%2F02%2F12%2F86e7d0908ce1abc72dbeb4396a33dd64.jpg" />
+              </view>
+              <view>
+                <text>肉夹馍</text>
+              </view>
+            </view>
+          </view>
+          <view class="order-content-detail">
+            <view class="order-content-Rdis">￥200</view>
+            <view>×2</view>
+          </view>
+        </van-cell>
+      </block>
+
+      <block wx:for="{{tagList}}" wx:key="item" wx:for-item="i">
+        <van-cell border="{{true}}" center>
+          <view slot="title">
+            <view class="solt-title">
+              <text class="{{i.classIcon}} content tag-dis">{{i.icon}}</text>
+              <view >
+                <text>{{i.icontext}}</text>
+              </view>
+            </view>
+          </view>
+          <view class="order-content-detail">
+            <view class="order-content-Rdis">{{i.price}}</view>
+          </view>
+        </van-cell>
+      </block>
+      
+        
+
+
+      <van-cell border>
+        <view slot="title">
+        </view>
+        <text class="font-b-sliod-content">实收：￥250</text>
+      </van-cell>
+    </van-cell-group>
+    <!-- <view class></view> -->
+  </view>
+  <view class="discuss-info">
+    <van-cell-group>
+      <van-cell title-class="cell-title" title="配送信息" value="" />
+      <van-cell>
+        <view class="slot" slot="title">
+          <view class="slot-title">收货地址:</view>
+          <view class="slot-content"><text >王华华\n 15247896548\n上海市普陀区长寿路748号湖南大厦一号楼1503</text></view>
+        </view>
+      </van-cell>
+      <van-cell>
+        <view class="slot" slot="title">
+          <view class="slot-title">配送骑手:</view>
+          <view class="slot-content"><text >李栓蛋</text></view>
+        </view>
+      </van-cell>
+    </van-cell-group>
+  </view>
+  <view class="order-info">
+    <van-cell-group>
+      <van-cell cell-title title="订单信息" value="" />
+      <van-cell>
+        <view class="slot" slot="title">
+          <view class="slot-title">订单号:</view>
+          <view class="slot-content">15225896228</view>
+        </view>
+      </van-cell>
+      <van-cell>
+        <view class="slot" slot="title">
+          <view class="slot-title">下单时间:</view>
+          <view class="slot-content">2018-70-12 11:56</view>
+        </view>
+      </van-cell>
+    </van-cell-group>
+  </view>
+</view>

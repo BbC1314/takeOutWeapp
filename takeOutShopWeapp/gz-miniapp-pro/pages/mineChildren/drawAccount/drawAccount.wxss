@@ -1,0 +1,45 @@
+.container{
+  margin: 0 20rpx
+}
+
+.btn{
+  position: absolute;
+  width: 710rpx;
+  bottom: 50px
+}
+
+.card{
+  padding: 20rpx;
+  margin-top: 20rpx;
+  border-radius: 10rpx;
+  background-color: crimson;
+  color: #ffffff
+}
+
+.card-header , .card-footer{
+  display: flex;
+  justify-content: space-between;
+}
+
+.card-footer{
+  margin-top: 20rpx
+}
+
+.card-header-left{
+  display: flex;
+  align-items: center
+}
+
+.dis{
+  margin-right: 20rpx
+}
+
+.iconfont{
+  font-size: 50rpx
+}
+
+.container .van-button--large{
+  height: 40px;
+  line-height: 38px;
+  border-radius: 40px
+}

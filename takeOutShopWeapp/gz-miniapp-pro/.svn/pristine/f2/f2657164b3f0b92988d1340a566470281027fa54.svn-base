@@ -1,0 +1,15 @@
+.title{
+  padding: 20rpx;
+  text-align: center;
+  font-size: 40rpx;
+  font-weight: 550;
+  background-color: #ffffff
+}
+
+.footer{
+  margin-top: 50rpx
+}
+
+.footer .van-button{
+  width: 50%
+}

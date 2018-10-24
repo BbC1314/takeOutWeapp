@@ -1,0 +1,10 @@
+.no-order{
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  margin: 100px 0;
+}
+
+/* .no-order-icon{
+  font-size: 100px;
+} */

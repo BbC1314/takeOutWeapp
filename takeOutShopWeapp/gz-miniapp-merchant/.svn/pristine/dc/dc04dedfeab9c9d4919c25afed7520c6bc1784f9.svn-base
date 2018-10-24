@@ -1,0 +1,4 @@
+.container .tab-container .tab-content{
+  color: #ffffff;
+  background-color: #c9ba83;
+}

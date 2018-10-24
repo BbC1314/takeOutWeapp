@@ -1,0 +1,186 @@
+/* .order-content {
+  margin: 20rpx 0;
+} */
+
+.thumb-img {
+  width: 200rpx;
+  height: 200rpx;
+}
+
+.thumb-size {
+  height: 200rpx;
+}
+
+.order-content-img {
+  width: 64rpx;
+  height: 64rpx;
+  overflow: hidden;
+  margin-right: 20rpx;
+}
+
+.order-content-Rdis {
+  margin-left: 30rpx;
+}
+
+.solt-title,
+.order-content-detail {
+  display: flex;
+  align-items: center;
+}
+
+.order-content-detail {
+  flex-direction: row-reverse;
+}
+
+.order-state {
+  display: flex;
+  justify-content: space-between;
+  /* align-items: center; */
+  height: 100rpx;
+  line-height: 100rpx;
+  background-color: #ffffff;
+  padding: 0 20rpx;
+}
+
+.order-state .dis {
+  margin-right: 20rpx;
+}
+
+.order-state .van-button{
+  height: 30px;
+  line-height: 28px;
+  border-radius: 30px;
+}
+
+.sendman__img {
+  width: 48rpx;
+  height: 48rpx;
+  border-radius: 50%;
+  margin: 0 20rpx;
+}
+
+.sendman-img {
+  display: flex;
+  align-items: center;
+}
+
+.icon-sm-my-tele {
+  font-size: 48rpx;
+  margin-right: 20rpx;
+}
+
+.tag-dis {
+  margin-right: 20rpx;
+}
+
+.slot {
+  display: flex;
+}
+
+.slot-title {
+  width: 150rpx;
+}
+
+.cell-title {
+  font-size: 30rpx;
+  font-weight: 500;
+}
+
+.slot-content {
+  width: 450rpx;
+}
+
+/* 订单配送中的位置信息的样式 */
+.address-name {
+  font-size: 24rpx;
+  font-weight: 600;
+}
+
+.address-phone {
+  font-size: 24rpx;
+  color: #666666;
+}
+
+.address-content-dis {
+  margin-right: 20rpx;
+}
+
+.address-increase {
+  position: fixed;
+  bottom: 0rpx;
+  width: 100%;
+  height: 100rpx;
+  background-color: #ffffff;
+}
+
+.Tblock {
+  margin: 10rpx;
+}
+
+.discuss-info .van-cell__value {
+  text-align: left;
+}
+
+.slot-content1 {
+  width: 100%;
+  height: 70rpx;
+  line-height: 80rpx;
+  font-size: 32rpx;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.icon-daohang {
+  font-size: 60rpx;
+}
+
+.order-send {
+  padding: 20rpx;
+  font-size: 30rpx;
+}
+
+.orderSend-footer {
+  margin-top: 20rpx;
+  padding: 20rpx;
+  display: flex;
+  justify-content: space-between;
+  background-color: #ffffff;
+}
+
+.special-cell {
+  font-size: 28rpx;
+  text-align: left;
+  margin-left: 20rpx;
+}
+
+.wrap {
+  width: 710rpx;
+  margin: 0 20rpx;
+  display: flex;
+  justify-content: space-around;
+  position: fixed;
+  bottom: 20rpx;
+}
+
+.wrap .van-button {
+  color: #000000;
+  width: 200rpx;
+}
+
+.get-active {
+  background: linear-gradient(90deg, #c880fa, #8a47ad);
+}
+
+.send-active {
+  background: linear-gradient(90deg, #3adb53, #2cad40);
+}
+
+.defaule {
+  background-color: #eeeeee;
+}
+
+.pop-item{
+  margin: 20rpx 10rpx;
+  text-align: center
+}

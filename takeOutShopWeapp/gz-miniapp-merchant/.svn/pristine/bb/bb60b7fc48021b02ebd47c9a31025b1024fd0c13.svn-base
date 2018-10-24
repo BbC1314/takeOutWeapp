@@ -1,0 +1,10 @@
+{
+  "name": "fyd-mini-merchant",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {},
+  "dependencies": {
+    "vant-weapp": "^0.3.2"
+  },
+  "devDependencies": {}
+}

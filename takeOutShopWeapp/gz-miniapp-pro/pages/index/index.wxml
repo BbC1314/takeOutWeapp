@@ -1,0 +1,101 @@
+<!--index.wxml-->
+<view class="container">
+  <gz-tab id="tab" custom-class="van-hairline--bottom" bind:select="selectTab"></gz-tab>
+  <swiper current="{{activeIndex}}" style="height: {{scrollHeight}}" scroll-y="{{true}}" bindchange="bindchange" >
+
+    <!-- 带抢单 -->
+    <swiper-item >
+      <scroll-view scroll-y="{{true}}" style="height: {{scrollHeight}}" >
+        <view class="set-filtrate" bindtap="onpopupFiltrate">
+          <text class="iconfont icon-parts1 set-filtrate-icon"></text>
+        </view>
+        <view wx:for="{{WaitForOrder}}" wx:key="index" class="wrap">
+          <!-- <getOrder-item item="{{item}}" bind:click="waitOrderDetail"></getOrder-item> -->
+          <order-item item="{{item}}" bind:click="waitOrderDetail"></order-item>
+          <van-button custom-class="order-btn" data-orderid="{{item.orderId}}" bindtap="oncontend">抢单</van-button>
+        </view>
+        <no-order item="{{WaitForOrder.length}}"></no-order>
+        <i-load-more wx:if="{{WaitForOrder.length > 0}}" hidden="{{ noMoreData || loading }}" loading="{{ loading }}" />
+      </scroll-view>
+    </swiper-item>
+
+    <!-- 待取货 -->
+    <swiper-item >
+      <scroll-view scroll-y="{{true}}" style="height: {{scrollHeight}}" >
+        <view wx:for="{{getOrder}}" wx:key="index" class="wrap1">
+          <get-order-item item="{{item}}" bind:click="waitOrderDetail"></get-order-item>
+          <view class="footer-hint font-24-3">预计出餐 <text class="dis">11:45</text></view>
+          <view class="footer-btn">
+            <van-button custom-class="order-btn-left get-active" bindtap="oncallPhone">联系店家</van-button>
+            <van-button custom-class="order-btn-right upload-active" data-orderid="{{item.orderId}}" bindtap="ongetOrder">上报到店</van-button>
+          </view>
+        </view>
+        <no-order item="{{getOrder.length}}"></no-order>
+      </scroll-view>
+    </swiper-item>
+
+    <!-- 带送达 -->
+    <swiper-item >
+      <scroll-view scroll-y="{{true}}" style="height: {{scrollHeight}}" >
+        <view wx:for="{{sendOrder}}" wx:key="index" class="wrap1">
+          <get-order-item item="{{item}}" bind:click="waitOrderDetail"></get-order-item>
+          <view class="footer-hint font-24-3">顾客希望到达时间 <text class="dis">11:45</text></view>
+            <view class="footer-btn">
+              <van-button custom-class="order-btn-left" bindtap="oncallPhone">联系顾客</van-button>
+              <van-button custom-class="order-btn-right send-active" data-orderid="{{item.orderId}}" bind:click="ondelivery">确认送达</van-button>
+            </view>
+        </view>
+        <no-order item="{{sendOrder.length}}"></no-order>
+      </scroll-view>
+    </swiper-item>
+  </swiper>
+
+  <!-- 弹出框 -->
+  <van-dialog
+    custom-class="dialog"
+    title="请输入小票订单后四位"
+    use-slot
+    show="{{ show }}"
+    show-cancel-button
+    bind:close="onClose"
+    bind:confirm="onconfirm"
+  >
+  <van-field
+    type="number"
+    value="{{ num }}"
+    maxlength="4"
+  />
+  </van-dialog>
+
+  <!-- 弹出层 -->
+  <van-popup
+    show="{{ shows }}"
+    position="bottom"
+    close-on-click-overlay
+    bind:close="onClose"
+  >
+    <view class="popup">
+
+      <view wx:for="{{popupData}}" wx:key="item.index" class="popup-header">
+        <view class="popup-header-title">
+          <text >{{item.title}}</text>
+          <text wx:if="{{ index === 0}}" class="font-24-9">(至少选择一种,可多选)</text>
+        </view>
+        <view class="popup-header-content">
+          <view wx:for="{{item.content}}"
+          wx:key="item" wx:for-item="i" wx:for-index="d"
+          bindtap="onselectDetail"
+          data-id="{{index}}{{d}}"
+          class="popup-content-item  {{ i.id>0 ? 'popup-active' : ''}}">
+            {{i.content}}
+          </view>
+        </view>
+      </view>
+
+      <view class="popup-footer van-hairline--top">
+        <van-button bind:click="onpopupReset" custom-class="order-btn-left">重置</van-button>
+        <van-button bind:click="onpopupConfirm" custom-class="order-btn-right upload-active">确定</van-button>
+      </view>
+    </view> 
+  </van-popup>
+</view>

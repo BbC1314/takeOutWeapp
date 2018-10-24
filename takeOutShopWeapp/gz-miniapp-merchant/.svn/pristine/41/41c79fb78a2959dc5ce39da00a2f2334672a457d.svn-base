@@ -1,0 +1,80 @@
+.warp{
+  margin: 20rpx;
+  box-shadow: 0 2px 12px 0 rgba(0, 0, 0, 0.1);
+}
+
+.status{
+  text-align: left
+}
+
+.order-detail{
+  text-align: left;
+  display: flex;
+  /* flex-direction: column; */
+  justify-content: space-between;
+}
+
+.cancel-order{
+  text-align: left;
+  margin-left: 40rpx;
+}
+
+.order-info{
+  display: flex;
+  text-align: left
+}
+
+.order-info-left, .order-info-right{
+  display: flex;
+  flex-direction: column
+}
+
+.order-info-left{
+  width: 30%;
+}
+
+.special .long-order{
+  width: 480rpx;
+}
+
+.hairline-bottom{
+  border-bottom: 1px solid #aaaaaa
+}
+
+.hairline-top{
+  border-top: 1px solid #aaaaaa
+}
+
+
+
+.font-36{
+  font-size: 36rpx;
+  font-weight: 550;
+}
+
+.font-40{
+  font-size: 40rpx;
+  font-weight: 550;
+}
+
+.font-fd-32{
+  color: #fd4830;
+  font-size: 32rpx;
+}
+
+.font-66{
+  color: #666666
+}
+
+.dis-right-20{
+  margin-right: 20rpx
+}
+
+.dis-right-30{
+  margin-right: 30rpx
+}
+
+.tag-color{
+  color: springgreen;
+  font-size: 40rpx;
+}

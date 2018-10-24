@@ -1,0 +1,21 @@
+<!--pages/test/index.wxml-->
+<view class="container">
+  <!-- <text>pages/test/index.wxml</text>
+  <button bindtap="handleDetail">detail</button> -->
+  <!-- <view wx:for="{{names}}" wx:key="{{index}}">{{item}}</view> -->
+  <!-- <view wx:for="{{students}}" wx:for-index="index" wx:for-item="student" wx:key="{{index}}">
+    {{studnet.id}}--{{student.name}}--{{student.age}}*****
+  </view>
+  <view>9*9乘法表</view> -->
+  <!-- <view wx:for="{{[1,2,3]}}" wx:for-item="i">
+    <view wx:for="{{[1,2,3]}}" wx:for-item="j">
+      <view wx:if="{{i <= j}}">
+        {{i}} * {{j}} = {{i * j}}
+      </view>
+    </view>
+  </view> -->
+  <!-- wx:key -->
+  <!-- <switch wx:for="{{objArray}}" wx:key="unique" style="display: block;">{{item.id}}</switch>
+  <button bindtap="switch">Switch</button>
+  <button bindtap="addToFront">添加到最前面</button> -->
+</view>
